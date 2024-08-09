@@ -1,4 +1,4 @@
-package GreedyAlgo;
+package Algorithm.GreedyAlgo;
 
 public class Jobsequencing {
 
