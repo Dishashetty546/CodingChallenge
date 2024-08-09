@@ -1,4 +1,4 @@
-package Algorithm;
+package GreedyAlgo;
 
 public class Jobsequencing {
 

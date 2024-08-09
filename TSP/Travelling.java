@@ -1,4 +1,4 @@
-package Algorithm;
+package TSP;
 
 import java.util.*;
 

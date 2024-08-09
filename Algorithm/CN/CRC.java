@@ -1,4 +1,4 @@
-package Algorithm.crc;
+package Algorithm.CN;
 
 import java.util.Scanner;
 
