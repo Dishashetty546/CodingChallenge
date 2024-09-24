@@ -1,0 +1,6 @@
+
+npm init--> to create python module
+npm install-->necessary pacakages
+npm install express--> necessary packages for express
+to run file of node --- node file_name
+

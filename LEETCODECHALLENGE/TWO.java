@@ -6,7 +6,6 @@ public class TWO {
         int[] nums = { 1, 2, 2, 3, 4 };
         int val = 2;
         System.out.println(remove(nums, val));
-
     }
 
     public static int remove(int[] nums, int val) {
