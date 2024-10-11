@@ -4,3 +4,15 @@ npm install-->necessary pacakages
 npm install express--> necessary packages for express
 to run file of node --- node file_name
 
+primitive datatype::
+stack- last in first out
+peek()
+pop()
+push()
+
+queue- first in first out
+
+CERTIFICATIONS-
+JAVA
+MERN
+backend
