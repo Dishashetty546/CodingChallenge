@@ -1,6 +1,15 @@
 package LEETCODECHALLENGE;
 //MERGE SORTED ARRAY
 
+//approach , take 2 variable, element 1, element 2
+//and take 2 pointers p1 nd p2, p1 is pointing on last element of array1, p2 pointing on last element of array2
+//p3 is an array ro store merge sorted array
+//first take element 1 from array1 ,nd element 2 from array2
+//if(element1>element2)
+//then, nums1[p3]=element1
+//decrement p3 and p1  
+//this continues until the merged array is formed
+
 public class ONE {
     public static void main(String[] args) {
         int[] nums1 = { 1, 2, 3, 0, 0, 0 };

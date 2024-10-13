@@ -1,5 +1,11 @@
 package LEETCODECHALLENGE;
 
+//roate elements k times
+//appraoch -
+//first reverse index 0 to n-1
+//then reverse from 0 to k-1
+//then reverse from k to n-1
+//use normal reverse logic
 import java.util.*;
 
 public class FOUR {

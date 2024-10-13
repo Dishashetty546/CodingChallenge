@@ -12,7 +12,7 @@
 //  let variablename = "w";
 //  variablename="g"
 //  console.log(variablename)
-//2. const--you'll get errors will you reassign
+//2. const--you'll get errors when you reassign
 // variable name shouldnt be any valid keyword ex: let, var
 // const var= "hello"
 //we can use underscore in b/w variable, but not special characters: EX:/,*
