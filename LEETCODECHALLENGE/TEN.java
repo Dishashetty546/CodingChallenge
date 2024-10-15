@@ -1,13 +1,12 @@
 package LEETCODECHALLENGE;
 
-//length of last word(  ex: "hello world"-->5 )
+//length of last word(  ex: "hello world"-->5 )   //* 
 //
 //
 public class TEN {
     public static void main(String[] args) {
-        String s = "hello world";
+        String s = "hello world my";
         System.out.println(length(s));
-
     }
 
     public static int length(String s) {
@@ -18,7 +17,5 @@ public class TEN {
         // lastword will have that lastword thing
         int length = lastword.length();
         return length;
-
     }
-
 }

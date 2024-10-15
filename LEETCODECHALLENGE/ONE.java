@@ -1,4 +1,5 @@
-package LEETCODECHALLENGE;
+package LEETCODECHALLENGE; //* 
+
 //MERGE SORTED ARRAY
 
 //approach , take 2 variable, element 1, element 2

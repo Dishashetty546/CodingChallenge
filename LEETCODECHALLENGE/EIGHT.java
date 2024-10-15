@@ -1,5 +1,5 @@
 package LEETCODECHALLENGE;
-//INSERT DELETE GETRANDOM --O(1)--for an array
+//INSERT DELETE GETRANDOM --O(1)--for an array    //--
 
 //--insert an item val into set return true if item not present
 //-- remove an item val from the set if present return true
@@ -27,7 +27,7 @@ public class EIGHT {
         if (map.containsKey(val)) {
             return false;
         }
-        map.put(val, list.size());
+        map.put(val, 1);
         list.add(val);
         return true;
     }

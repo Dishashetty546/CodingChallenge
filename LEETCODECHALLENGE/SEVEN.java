@@ -1,5 +1,5 @@
 package LEETCODECHALLENGE;
-//product of elements in an array except the self
+//product of elements in an array except the self //* 
 
 //aproach 1: dividing each elemet by itself
 
@@ -18,9 +18,7 @@ public class SEVEN {
 
     }
 
-    public static int[] element(int[] nums)
-
-    {
+    public static int[] element(int[] nums) {
         int leftproduct[] = new int[nums.length];
         int rightproduct[] = new int[nums.length];
         for (int i = 0, temp = 1; i < nums.length; i++) {

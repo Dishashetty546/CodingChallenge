@@ -1,8 +1,9 @@
-package LEETCODECHALLENGE;
+package LEETCODECHALLENGE; //--
 
 import java.util.*;
 
-//FIND MAJORITY ELEMENT
+//FIND MAJORITY ELEMEN
+
 public class THREE {
     public static void main(String[] args) {
         int[] nums = { 3, 2, 3 };
@@ -11,7 +12,7 @@ public class THREE {
     }
 
     public static int majority(int[] nums) {
-        Map<Integer, Integer> map = new HashMap<>();
+        HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
         for (int i = 0; i < nums.length; i++) {
             if (map.containsKey(nums[i])) {
                 map.put(nums[i], map.get(nums[i]) + 1);

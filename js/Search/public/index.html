@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Search Engine</title>
+</head>
+<body>
+    <h1>Search Engine</h1>
+    <input type="text" id="search-input" placeholder="Search by country...">
+    <button id="search-button">Search</button>
+    
+    <h2>Results:</h2>
+    <ul id="results-list"></ul>
+
+    <script>
+        document.getElementById('search-button').onclick = function() {
+            const query = document.getElementById('search-input').value;
+            fetch(`/search?q=${encodeURIComponent(query)}`)
+                .then(response => response.json())
+                .then(results => {
+                    const resultsList = document.getElementById('results-list');
+                    resultsList.innerHTML = ''; // Clear previous results
+                    results.forEach(item => {
+                        const li = document.createElement('li');
+                        li.textContent = `Country: ${item.Country}, Doctors: ${item.Doctors}, Nurses: ${item.Nurses}`;
+                        resultsList.appendChild(li);
+                    });
+                })
+                .catch(error => console.error('Error:', error));
+        };
+    </script>
+</body>
+</html>
+
