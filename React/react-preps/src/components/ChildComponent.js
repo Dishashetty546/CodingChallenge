@@ -1,8 +1,7 @@
- const ChildComponent=(props)=>{
+export const ChildComponent=(props)=>{
      return (
         <div>
-        <button onClick={props.greetHandler}>h1</button>
+        <button onClick={()=>props.greetHandler('child')}>h1</button>
         </div>
      )
 }
-export default ChildComponent
