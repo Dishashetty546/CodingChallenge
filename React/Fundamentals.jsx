@@ -148,5 +148,100 @@
 //steps
 //1.  use html code to buld a form interface
 //2.  import usestate from react
-//3.  
+// import {useState} from 'react';
+//3.  within the component create a state component - username,setUsername
+// const [username, setUsername]  = useState('')
+//4. initialize username to value attribute   ---changes will not be displayed
+{/* <input type='text' value={username}  */}
+//5. add onchange event
+//  <input type='text' value={username}  onChange={(event)=>setUsername(event.target.value)}/>
+//6.form submit
+//  <button type='submit'>Submit</button>
+//7. handling onsubmit event
+//add another function in this component, handlesubmit 
+// const handlesubmit=(event)=>
+//     {
+//         event.preventDefault()     //on refresh data wont fanish
+//         alert(`form data is ${username}`)
+//     }
+//add handlesubmit function in form tag
 
+//how react works with HTTP
+//post request  -  Json placeholder - place for testing and prototyping
+//import { useState } from 'react'
+// export const PostForm =()=>
+//     {
+//         const [userId,setUserId] = useState('')
+//         const [title,setTitle] = useState('')
+//         const [body, setBody] = useState('')
+//         const submitHandler  =(event)=>
+//         {
+//             event.preventDefault()
+//             fetch('https://jsonplaceholder.typicode.com/posts', {
+//                 method: 'POST',
+//                 body: JSON.stringify({
+//                   title: title,
+//                   body: body,
+//                   userId: 1,
+//                 }),
+//                 headers: {
+//                   'Content-type': 'application/json; charset=UTF-8',
+//                 },
+//               })
+//                 .then((response) => response.json())
+//                 .then((json) => console.log(json));
+    
+//         }
+//         return (
+//            <form onSubmit={submitHandler}>
+//              <div>
+//                 <input type='text' placeholder="User ID" value={userId} onChange={(event)=> setUserId(event.target.value)}/>
+    
+//                 </div>
+//                 <div>
+//                 <input type='text' placeholder="Title" value={title} onChange={(event)=> setTitle(event.target.value)}/>
+    
+//                 </div>
+//                 <div>
+//                 <input type='text' placeholder="Body" value={body} onChange={(event)=> setBody(event.target.value)} />
+    
+//                 </div>
+//                 <button>Submit</button>
+//            </form>
+//         )
+//     }
+
+
+//-----------------------Transition HOOK --------------------------------------------------------react 18
+// return (
+//     <>
+//       <div className="App">
+//         {
+//           NAMES.map((item) => (
+//             <p key={item.id}>{item.firstname} {item.lastname}</p>
+//           ))
+//         }
+//       </div>
+
+//steps:
+//1.create a json file , of student attributes like id, name, first name,last name
+//2.
+// import NAMES from './components/Studentdata.json';
+// function App() {
+//   const [query,setquery]= useState('')
+//   const changeHandler = (event)=>{
+//     setquery(event.target.value)
+//   }
+//   const filterNames = NAMES.filter((item)=>{
+//     return item.firstname.includes(query) || item.lastname.includes(query)
+//   })
+//   return (
+//     <>
+//       <div className="App">
+        
+//           <input type='text' value={query} onChange={changeHandler}/>
+//           {filterNames.map((item) => (
+//             <p key={item.id}>{item.firstname} {item.lastname}</p>
+//           ))
+//         }
+//       </div>
