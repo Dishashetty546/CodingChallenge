@@ -1,6 +1,7 @@
 // import logo from './logo.svg';
-import { useState } from 'react';
+// import { useState } from 'react';
 import './App.css';
+// import Buttons from './components/Buttons';
 // // import './appStyle.css';
 // import styles from './appStyle.module.css'
 // import Greet from './components/greet'
@@ -15,25 +16,32 @@ import './App.css';
 
 // import { PostForm } from "./components/PostForm";
 
-import NAMES from './components/Studentdata.json';
+// import NAMES from './components/Studentdata.json';
+// import Fetch from './components/fetch';
+// import Fetches from './components/Fetches';
+// import FetchRow from './components/FetchRows';
+// import Buttonss from './components/Buttons';
+// import Counter from './components/CounterApp';
+// import  Greetings from './components/Conditional';
+import Class from './components/ClassComponent';
 function App() {
-  const [query,setquery]= useState('')
-  const changeHandler = (event)=>{
-    setquery(event.target.value)
-  }
-  const filterNames = NAMES.filter((item)=>{
-    return item.firstname.includes(query) || item.lastname.includes(query)
-  })
+  // const [query,setquery]= useState('')
+  // const changeHandler = (event)=>{
+  //   setquery(event.target.value)
+  // }
+  // const filterNames = NAMES.filter((item)=>{
+  //   return item.firstname.includes(query) || item.lastname.includes(query)
+  // })
   return (
     <>
-      <div className="App">
+      {/* <div className="App">
         
           <input type='text' value={query} onChange={changeHandler}/>
           {filterNames.map((item) => (
             <p key={item.id}>{item.firstname} {item.lastname}</p>
           ))
         }
-      </div>
+      </div> */}
     {/* <Greet name='disha'/>
     <Greet name="anisha">
       <button>Action</button>
@@ -51,6 +59,14 @@ function App() {
    {/* <hostList/> */}
   {/* <PostList/> */}
   {/* <PostForm/> */}
+  {/* <FetchRow/> */}
+  {/* <h1>hello</h1>
+  <Buttonss>hello components</Buttonss>
+  <Buttonss><h1>heheh</h1></Buttonss> */}
+  {/* <Counter/> */}
+  {/* <Greetings isLoggedIn={false} username="disha"/> */}
+  <Class/>
+  
     </>
   );
 }

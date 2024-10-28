@@ -64,7 +64,14 @@
 //used- String nd number concatination
 //      while using comparition operator
 
-//-----------------------------------STEP 3--------------------------------------------
+//----------------------------------STEP 3--------------------------------------------
 //13. operator precidence - BODMAS (bracket, division, multiplication , addition, sub)
 //14. uninary, binary, ternary operator
+//15. closure: the inner function has excress to outer function, its a func inside a func
+//16. diff b/w call,apply and bind --> call nd apply calls a func while bind creates a new func, arguments are individually passed in call while apply excepts an array.
+//17. event loop
+//18. currying func: taking func with multiple arguments and turning it into a squence of func each with only single argument
+//help in code reuseablility, func composition
+//19. js object inherit features from another object
+//20.
 
