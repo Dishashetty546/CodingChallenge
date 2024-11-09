@@ -1,6 +1,7 @@
 // import logo from './logo.svg';
 // import { useState } from 'react';
 import "./App.css";
+import About from "./components/About";
 // import Buttons from './components/Buttons';
 // // import './appStyle.css';
 // import styles from './appStyle.module.css'
@@ -15,7 +16,7 @@ import "./App.css";
 // import { PostList } from "./components/PostList";
 
 // import { PostForm } from "./components/PostForm";
-import ToDoList from "./components/Todolist";
+// import ToDoList from "./components/Todolist";
 // import NAMES from './components/Studentdata.json';
 // import Fetch from './components/fetch';
 // import Fetches from './components/Fetches';
@@ -49,7 +50,7 @@ function App() {
     <Greet name="hello">childrens</Greet> */}
       {/* <Message/> */}
       {/* <ClickHandler/> */}
-
+      <About />
       {/* <NameList/> */}
       {/* <Stylesheet/> */}
       {/* <Inline/> */}
@@ -66,7 +67,7 @@ function App() {
       {/* <Counter/> */}
       {/* <Greetings isLoggedIn={false} username="disha"/> */}
       {/* <Class/> */}
-      <ToDoList />
+      {/* <ToDoList /> */}
     </>
   );
 }
