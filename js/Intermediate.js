@@ -4,17 +4,16 @@
 //global scope: globally scoped var cant be accessed inside a block or func
 
 //Nested function scope - function within the func
-// let a =10;
+// let a =10;  //here a is global scope
 // function outer()
 // {
-//     let b=10;
+//     let b=10;   //b is a func scope
 //     function inner(){
-//         let c= 30;
+//         let c= 30;   //c is block scope
 //         console.log(a,b,c);
 //     }
 //     inner();
 // }outer()
-
 
 //----------------CLOSURE---------------------------------
 //closure is a combination of functions bundled together with refernces to its surrounding states, closure is created every time func is created
@@ -29,9 +28,9 @@
 // }
 // outer()    //every outer function , will reinitialize counter value to o initially
 // outer()
-//first the compiler will check for counter in inner function, its not present, then check on outer function , it is presrnt as counter=0, 
+//first the compiler will check for counter in inner function, its not present, then check on outer function , it is presrnt as counter=0,
 
-//EX: CLOSUREs
+//EX: CLOSURES
 // function outer()
 // {
 //     let counter=0;
@@ -42,7 +41,7 @@
 //     }
 //     return inner;
 // }
-// const fn= outer()
+// const fn=outer()
 // fn()
 // fn()
 
@@ -51,15 +50,14 @@
 //* returning combination of func defination nd function scope
 //* combination of function and its scope is called as closure.
 
-
 //---------------Function currying-----------------------
 //transform a func with multiple argumnets into a sequence of nested funcs that takes one argument at a time
 //EX: f(a,b,c) transformed to f(a)(b)(c)
 
 //noraml function
-// function sum(a,b,c)
+//function sum(a,b,c)
 // {
-//    return a+b+c 
+//    return a+b+c
 // }
 //  console.log(sum(1,4,3))
 
@@ -82,7 +80,6 @@
 // }
 // const curriedsum= curry(sum);
 // console.log(curriedsum(1)(4)(5));
-
 
 //---------------This keyword------------------
 //refers to object it belongs to
@@ -110,7 +107,7 @@
 // function saymyname(){
 //     console.log(`my name is ${this.name}`)
 // }
-// saymyname.call(person) 
+// saymyname.call(person)
 
 //NEW BINDING - new keyword - by using new js will create a new object foe this keyword will refernce
 // function person(name)
@@ -126,7 +123,6 @@
 //explicit binding
 //implicit binding
 //default binding
-
 
 //-----------PROTOTYPE----------------
 //usage in inheritance
@@ -153,7 +149,6 @@
 //     console.log(batman.getfullname())
 // }
 
-
 //-------------------class----------------------------------
 //create a class
 //Inherite classes
@@ -172,7 +167,6 @@
 // }
 // const batman= new superhero('bruce','hello')
 // console.log(batman.saymyname())
-
 
 //-----------ITERABLES ND ITERATORS--------------------
 //iteration in js
@@ -197,7 +191,7 @@
 //method should not accept any argument and should return an object
 //object must have next() method that returns an object with 2 properties
 //* value: which gives current element
-//*done: which is a boolean value 
+//*done: which is a boolean value
 
 // const obj={
 //     //method key
@@ -221,7 +215,7 @@
 //             }
 //         }
 //         return iterator
-        
+
 //     }
 
 // }
@@ -229,7 +223,6 @@
 // {
 //     console.log(word)
 // }
-
 
 //------------GENERATORS--------------------------
 //special class functions , whr it creates our own iterators
@@ -256,6 +249,3 @@
 //advantage of generator over iterator,
 //we dont need to create an object and return an argument
 //no need of next keyword
-
-
-

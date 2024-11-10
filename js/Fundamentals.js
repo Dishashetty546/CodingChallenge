@@ -11,7 +11,7 @@
 //1. let--declare a variable to something and reassign with something else
 //  let variablename = "w";
 //  variablename="g"
-//  console.log(variablename)
+//  console.log(variablename)   //o/p:g
 //2. const--you'll get errors when you reassign
 // variable name shouldnt be any valid keyword ex: let, var
 // const var= "hello"
@@ -43,12 +43,13 @@
 // const second=5;
 // const result= first/second;
 // console.log( typeof result);  //o/p: number
+//typeof whenever we want to find datatype of specific value
 
 //boolean
 //null
 //undefined
 // let x;
-// console.log(x); 
+// console.log(x);
 
 //diff b/w null nd undefined: variable has been declared but has not yet been assigned valu, null is an assigned value, assigned to null value
 
@@ -71,6 +72,8 @@
 // const date= new Date();
 // console.log(date); //o/p: 3:39 GMT+0530 (India Standard Time)
 //this is also an object
+// const date = new Date();
+// console.log(date);
 
 //statically typed
 // int number=5;
@@ -84,7 +87,7 @@
 
 //-------------Operators and  equality--------------
 //true or false
-// == , !=, <=,>=, 
+// == , !=, <=,>=,
 //assignment nd logical operator, similar to the one we learnt in java
 
 //-------------Decision making code---------------------
@@ -95,17 +98,19 @@
 //-------------------------functions-------------------------
 //js function -  a block of a code performs a task
 //function declaration(defining a function)
-//function call (  calling/excicuting a func)
+//function call (calling/excicuting a func)
 //function is a js keyword
 //steps:
+
 //step1: function declaration
 // function square(x)
 // {
 //     return x*x;
 // }
-// // step2: function call
-// const result= square(5);
-// console.log(result)
+
+//step2: function call
+//const result=square(5);
+//console.log(result)
 
 //Three types of function declarations
 //used when we want this keyword
@@ -133,7 +138,7 @@
 //     console.log(`hi, ${name}`)
 // }
 // sayhi('joe');                                //hi,joe
- 
+
 // function add(a,b)
 // {
 //     return a*b;
