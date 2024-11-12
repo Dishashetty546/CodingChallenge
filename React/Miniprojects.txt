@@ -1,3 +1,7 @@
 --------------------project 1--------------------------------------
-toggle effect from dark mode to light mode
 
+DAY 1 - COUNTDOWN TIMER
+1. three boxes one for hour, next for min, next for sec , it should have resume , start, reset button 
+step:
+first set up frontend with react xml and css
+once start button is clicked, it need another function , after we click on start it render into some other page,so we use useState a react custom hook
