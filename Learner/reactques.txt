@@ -1,0 +1,78 @@
+react ques
+Create a functional component that displays a simple "Hello, World!" message.
+Create a UserCard component that takes name and age as props and displays them.
+State Management with useState
+
+Build a counter component with increment, decrement, and reset buttons.
+Create a toggle component that switches between "On" and "Off" states when clicked.
+Handling Events
+
+Build a button that changes color each time it's clicked.
+Create an input field that updates its value in real-time below the field as you type.
+Conditional Rendering
+
+Create a component that displays "Logged In" or "Logged Out" based on the user's login state.
+Build a weather component that displays "Warm" or "Cold" based on a temperature variable.
+Mapping over Data
+
+Render a list of items (e.g., fruits) dynamically from an array.
+Create a ToDoList component that displays a list of tasks from an array of objects.
+Props Drilling
+
+Build a UserProfile component that receives a user object as props and displays the user's details.
+Pass a callback function as a prop to update data in a child component.
+Intermediate Level
+Controlled Components
+
+Create a simple form with controlled input fields (name, email) and display the entered data below the form on submit.
+Build a calculator with controlled inputs to display the sum of two numbers.
+Fetching Data with useEffect
+
+Build a FetchUsers component that fetches and displays a list of users from an API.
+Create a FetchPosts component that displays posts from an API and updates on button click.
+Conditional API Call in useEffect
+
+Modify the above FetchUsers component to fetch data only when a "Load Users" button is clicked.
+Dynamic Styling
+
+Build a component that displays text in either blue or red, depending on a prop.
+Create a button that toggles between two themes (light and dark) on click.
+Handling Forms with Validation
+
+Create a registration form with fields for username, email, and password. Display validation errors for each field on submit.
+Build a login form with controlled inputs and display an error message if fields are empty on submit.
+React Context for State Management
+
+Create a ThemeContext to toggle between light and dark modes across multiple components.
+Build a UserContext to store a user's login state and display different views based on the login status.
+Router Basics
+
+Set up React Router and create routes for Home, About, and Contact pages.
+Create a Profile page and set up a dynamic route with userId as a parameter.
+Memoization and Optimization
+
+Use React.memo to prevent unnecessary re-renders in a list of users.
+Create a counter with two buttons and implement useCallback to optimize event handlers.
+Advanced State Management with useReducer
+
+Build a shopping cart component that adds, removes, and updates items using useReducer.
+Create a simple task management app with useReducer to add and delete tasks.
+Custom Hooks
+
+Create a custom hook useFetch to fetch data from any API endpoint.
+Build a useLocalStorage hook that gets and sets data in local storage.
+Component Communication with Context and Reducer
+
+Build a theme toggler using Context and useReducer for global state management.
+Implement an authentication system with Context and useReducer to manage login and logout actions.
+Dynamic Table with Sorting and Filtering
+
+Build a table component that displays a list of products and includes sorting and filtering capabilities.
+Lazy Loading and Suspense
+
+Create a component that lazy loads a large component using React.lazy and Suspense.
+Implement lazy loading for routes in a React Router setup.
+Error Boundaries
+
+Create an error boundary component and wrap it around a component that throws an error to display a fallback UI.
+Experiment by throwing an error in a child component and observe how the error boundary handles it.

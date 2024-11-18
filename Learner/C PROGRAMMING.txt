@@ -1,0 +1,51 @@
+C NOTES
+-C is general purpose, procedure oriented language
+-Discovered by Dennis ritcgie in 1972
+-C is fast , provides low-level accces to memory , produces fast ans efficient memory
+-Widely used in system programming, embedded systems, hardware interaction
+
+PRE-PROCESSOR DERECTIVE
+
+Preprocessor directives are commands that are processed before the actual compilation of the C program begins. They tell the compiler to perform specific tasks such as including files, defining macros, and conditional compilation. Preprocessor directives always start with the # symbol.
+
+#include:Used to include files, such as header files, in a program
+#define:Used to define constants or macros.
+#undef:Undefines a macro.
+#ifdef and #ifndef:Conditional compilation. Code inside these directives is compiled only if a certain macro is defined or not defined.
+#if, #elif, #else, #endif:Used for conditional compilation based on expressions.
+
+To include necessary libraries or user-defined files.
+To define constants and macros that make code more readable and maintainable.
+For conditional compilation, which allows code to be platform-dependent or feature-specific.
+
+MAIN() FUNCTION
+
+The main() function is the entry point of every C program. When a C program is executed, the main() function is called first, and it tells the program where to start executing the code.
+
+It is the starting point for execution in C programs.
+The return value from main() is sent to the operating system to signal whether the program executed successfully (return 0) or encountered an error (return non-zero).
+
+RETURN FUNCTION
+
+The return statement terminates the execution of a function and optionally returns a value to the calling function. It is used to exit the main() function and return a value to the operating system, indicating whether the program ended successfully or encountered an error.
+
+1. return 0;
+Purpose: Indicates successful execution.
+
+Where Used: Typically used in the main() function to signal the operating system that the program has completed successfully.
+
+In C, returning 0 from the main() function is the standard way to indicate that the program executed without errors.
+
+return; (No Value)
+Purpose: Used in functions with a void return type to exit the function without returning any value.
+
+Where Used: Used in functions declared as void, which do not return any value. It simply causes the function to exit.
+
+In void functions, return; can be used to exit early, without passing any value back to the calling function.
+
+2. return 1;
+Purpose: Indicates an error or abnormal termination.
+
+Where Used: Often used in the main() function or other functions to signal the operating system or calling function that an error occurred during execution.
+
+Returning 1 (or any non-zero value) generally signifies that the program encountered an issue or exited due to an error.

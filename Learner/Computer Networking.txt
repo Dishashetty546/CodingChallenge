@@ -1,0 +1,156 @@
+-----------------COMPUTER NETWORKING--------------------------------------------------
+ Internet: connecting two or more computers
+TCP-transmition control protocol
+Protocol: sending a email to someonr will require some steps, or talking to a friend, maybe convaying some msg through video--> thses all should be conveyed in someway, like data should be transferred fully without any glitch or small glitch is fine --> these are termed as protocol
+UDP
+IP-internet protocol
+
+WWW-world wide web--by timp burner
+which stores thes documents
+
+rules to set or build an application:
+rfc- request for comments
+internet soceity will set all these rules
+
+eq; google.co m --->request set to googe
+                              <---response is sent
+
+protocols:rules and regulations framed by internert soceity they are known as protocol
+Types of protocols:
+TCP: data will be reached to destination with 100% purity is data, and ensure with feedback
+UDP: here we dont care if 1005 data is transferred or name , video conferance
+(User datagram protocol)
+HTTP:hyper text transfer protocol, how sender sends request to receiver how recicer sends the rewuest these rules are defned here
+
+How data is transfered?
+evverything in computer are in 0 or 1
+all the data is transferred through packets
+
+how does it knowns if we type google.com how will it connect to google?
+its using  its ip address, all the computer networks are identifies using an ip address
+
+IP(Internet providor) address of our own computer---$ curl if config.me -s
+
+Internet service providor(ISP)---Modem/router  is connected--->they are having an Ip address--> To router we connect number of devices D1,D2,D3 having diff IP address using DHCP ptrotocol
+All the devices connected through same router or modem , when they send any request-->request will be sent through Global Ip address--> so they all having same IP address for request
+
+BUT how to differnciate them -----> using PORT NUMBER
+IP-where your computer is located
+pn- which application used oto communicate
+
+PORT NUMBER---16 bit number---->having 16 cells
+so total portnumber can be designed is 2^16===65000
+
+Web pages use HTTP protocol-->evrything happens in PORT 80
+                            MongoDB port nuumber is 2712
+                            SQL--1433
+some port numbers are already reserved like port --->0-1023
+                                            1024-49152--->these port numbers are already reserved for some applications
+remaining anyone can use
+
+1mbps- mega bits per sec--1000000 bits/s
+1gbs-10^9 biits/s
+
+how are countries connected through networks:
+Its not through clous but there is large bunch of wires buried under oceans
+physiccaly: optical fibers cables
+wireless: bluetooth,wifi, 34 bits
+
+LAN: (local area network)
+-->group of offices/housees
+in an area it is
+
+Ethernet cables
+
+MAN(Metroprlenton area network): across cities they are connected each other
+
+WAN: wide area network -->across thecountry
+using optical fiber cable
+SONET
+frame delay
+
+Internet is a collection of LAN,MAN,WAN
+
+Modem-->used too convert digital signal into electrical signal
+
+Various ways computer are connected
+TOPOLOGIES
+BUS topologies--> like a bus all the computers are connected
+RING topologu--> like a ring
+STAR topology--> a central device is connected in between all
+TREE topology-->(mixture of bus and start topology)
+many stars are connected in a bus kin of a way
+MESH topology-->evey computer is connected to every single computer
+         expensive, scalability issues
+
+Structure of network:
+=
+OSI model(Open systems Inter connection Model)
+7 LAYERS
+ 
+Application layer
+presentaion layer
+session layer
+Transport layer
+Network layer
+Data link Layer
+Physical Layer 
+
+Application Layer--> Its implemented in software-->consist of applications
+Presentaion Layer-->Take the data from application layer, this can be in any form character/ letters etc, it is converted into bytes/bits, the data is encryped, also provides abstraction, data is compressed(loss will depends)
+Session layer-->helps in setting upa nd managing data, Authentication, authorization. SEssion is basically likr, when we logged into any particular e-commerce site -like Amazon, we purchase things, then buy it pay, then log out of that particular site
+that particular time or process between log in  log out can be termed as sessions
+Transport layer-->any data comes from session layer is divide into several small small segments, every segments consist of source and sequence and port number, It has flow control system(), error control system
+connection oriented transportation called TCP and connectioless transportation is called UDP
+TCP example email
+UDP example video conferences
+
+TILL HERE IT WAS INSIDE OUR OWN COMPUTERS
+NOW ITS OTHER COMPUTERS
+
+Network  layer-->connecting with other computers
+Logical addressing,  IP packets is assigned , as every computer having diff IP addressses, it perform Routing
+data link layer--> Here it will recive data in the form of packets from sender, packets will consist of sender and receivers IP address.
+Physical addressing is done here--> MAC address-->Is a 12 digit alpha numeric number --> our computer will not have only one MAC address, our bluetook might have some MAC address, wifi might have some MAC  address
+adds MAC address to packets
+Phisiscal --> hardware , having cables, wires.
+
+ANOTHER MODEL
+
+TCP/IP model
+
+layers are reduced here:
+
+Apllication layer
+Transport layer
+Network layer
+Data link layer 
+Physical layer
+
+-------APPLICATION LAYER------------
+-users interact here
+- whatsapp,etc
+-where--devices
+-they have some protocols
+-Client server Architecture
+
+I want to watch some youtube video
+CLIENT- im the client here
+SERVER- youtube is server here
+process- how rewuest send and responses recived
+
+Host our own server--unique IP addresses
+
+Client-server architecture
+peer-to-peer architecture
+
+Repeater-->present in network layer, it regenerate the signal over the same networl before signal becomes wwea or corruped
+they dont amplify signal , but they just copy th signal bit by bit and regerate in its original stringth
+its a 2 port device
+Hub--> its  a multiport device,it connects multiple wires  coming from different branches.
+
+
+
+
+
+

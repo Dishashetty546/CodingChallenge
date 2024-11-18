@@ -1,0 +1,341 @@
+--------------------------Java-------------------------------------
+
+COLLECTION FRAMEWORK:
+
+Framework: A framework is a set of classes and interfaces which provide a ready-made architecture
+Collection: A group of individual objects that represent a single entity is known as a collection
+collection Framework: represent a group of objects as a single entity in the Java programming language we need classes and interfaces defined by the Collection Framework
+STL(Standard Template Library).
+Collection Interface: Interfaces specify what a class must do and not how. It is the blueprint of the class. It is the root interface of the Collection Framework that defines the most common methods that can be used for any collection objects.
+
+The utility package, java.util contains all the classes and interfaces that are required by the collection framework.
+
+ArrayList: . ArrayList provides us with dynamic arrays in Java. The size of an ArrayList is increased automatically if the collection grows or shrinks if the objects are removed from the collection.
+METHODS IN JAVA FOR ARRAYLIST
+----------------------------------------------------------------------------------------------------------------------------------
+1.Java.util.ArrayList.add()
+ex: // Java code to illustrate add(Object o) 
+import java.io.*; 
+import java.util.ArrayList; 
+
+public class ArrayListDemo { 
+public static void main(String[] args) 
+	{ 
+
+		// create an empty array list with an initial capacity 
+		ArrayList<Integer> arrlist = new ArrayList<Integer>(5); 
+
+		// use add() method to add elements in the list 
+		arrlist.add(15); 
+		arrlist.add(20); 
+		arrlist.add(25); 
+
+		// prints all the elements available in list 
+		for (Integer number : arrlist) { 
+			System.out.println("Number = " + number); 
+		} 
+	} 
+} 
+-arrays in java are dynamically allocated
+-if you want to add all into a arraylist use   listname.addAll(newarray_name)
+
+static memory allocation-Memory is allocated at compile time.
+The size of the memory is fixed, and it cannot be changed during runtime.
+The memory is typically allocated in the stack or data segment.
+
+Dynamic memory allocation-Memory is allocated at runtime.
+The size of the memory can be changed during the program execution, allowing more flexibility.
+The memory is typically allocated from the heap.
+
+-Get() function
+if you want to get an element at some index-- get(index)
+
+syntax:  list_name.get(index_number)
+
+-clear() function
+to clear all the elements in the array list
+list_name.clear()
+empty list will print.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+2. Remove an element from ArrayList in Java
+
+THREE methods
+There are 3 ways to remove an element from ArrayList as listed which later on will be revealed as follows:
+
+Using remove() method by indexes(default)
+Using remove() method by values
+Using remove() method over iterators
+
+using indexes:   al.remove(1); 
+using values:   al.remove(Integer.valueOf(1)); 
+using iterators: int x = (Integer)itr.next(); 
+            if (x < 10) 
+                itr.remove(); 
+        } 
+------------------------------------------------------------------------------------
+3. to replace an elemet at specific position: ArrayList set() method
+  int i = arrlist.set(3, 30); 
+ arrlist.add(1); 
+  arrlist.add(2); 
+   arrlist.add(3); 
+   arrlist.add(4); 
+   arrlist.add(5); 
+beforw {1,2,3,4,5}
+after{1,2,3,30,5}
+
+-For IndexOutOfBoundsException.
+
+-size()
+to find size of arrayList()
+using list_name.size()
+
+-Iterator function
+use to iterate through the array
+Iterator<Integer> it = list.iterator();
+
+while(it.hasNext())
+{
+System.out.println("iterator".+it.next());
+}
+
+or
+
+using for each loop to iterate
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Stack
+- Stack is a class is based on the basic principle of last-in-first-out
+peek()
+-to get first element from the stack , as in stack it is last in first out
+pop()
+-to remove an element
+push()
+-to put an element into stack
+
+Queue
+can be implement using arrayList or Hashset or LinkedList
+first-in first-out
+-put element into queue.offer()
+
+-remove element from the queue --queue.poll()
+
+-next elemet which gets out --queue.peek()
+
+queue.add()
+queue.element()
+queue.remove()
+
+priorityQueue()
+is based on the priority heap. It is used when the objects are supposed to be processed based on priority. It is known that a queue follows the First-In-First-Out algorithm.
+
+Java.util.PriorityQueue.contains() method is used to check whether a specific element is present in the PriorityQueue or not
+
+queue_name.offerfirst()
+to add elemets in first of the queue
+
+queue_name.offerLast()
+to add elements in last of the queue
+
+HashSet is an inherent implementation of the hash table data structure or Hashing. The objects that we insert into the HashSet do not guarantee to be inserted in the same order. The objects are inserted based on their hash code.
+
+-----------------------EXCEPTIONAL HANDLING---------------------------------------------------
+
+Exception: is a disrupt that occures during execution of a program or noram flow of the program, if not handled properlt can lead to termiinate 
+
+1. if we have taken onject as null , then we try to print it, we get java.lang.NullPointerException
+
+how to handle exception in java
+
+3 ways
+1.TRY: set of statements that can throw exception hence are required to be monitered 
+2.catch:when excepytion occurs , this block catches and work accordingly to handle it and throws it
+3.finally:clean up is done here, try has an exception ,
+
+heircy of exception in java: 
+throwable errors:
+Superclass for all errors and exceptions.
+Contains two major subclasses: Error and Exception.
+It has methods like printStackTrace(), getMessage(), and getCause() for exception handling.
+
+error class:
+Superclass for all errors and exceptions.
+Contains two major subclasses: Error and Exception.
+It has methods like printStackTrace(), getMessage(), and getCause() for exception handling.
+
+exception error:
+epresents conditions that a program might want to catch.
+
+Checked Exceptions
+Checked exceptions are checked at compile-time. The compiler ensures that these exceptions are either caught or declared in the method's throws clause.
+IOException
+SQLException
+FileNotFoundException
+ClassNotFoundException
+InterruptedException
+
+ Unchecked Exceptions (Runtime Exceptions)
+hese exceptions are not checked at compile-time.
+NullPointerException
+ArrayIndexOutOfBoundsException
+IllegalArgumentException
+ArithmeticException
+ClassCastException
+
+
+d/f bit errors and exception
+
+errors-dont have second choice to it, it will directly terminate, whereas exception- we can recover using try nd catch method
+errors- compiler will not hve any idea on unchecked exceptions and errors whereas exception-compiler will have knowledge about exceptions hence compiler will force to do try-catch approch
+errors-related to envirnoment where application is running, whereas exception-related to application
+errors-all errors are unchecked type whereas exception-both checked and uncheked type
+error- are type java.lang.Errors whereas, exception- type java.lang.Exception
+
+while handling exception- using try catch  , finally method
+
+we cant write only try block withoyt catch and finally blocks
+-either catch or finally is must
+-if we dont use --we'll get compile time error
+
+
+--Compile-Time Errors: Errors that occur when you violate the rules of writing syntax are known as Compile-Time errors. This compiler error indicates something that must be fixed before the code can be compiled
+--run time error: Errors which occur during program execution(run-time) after successful compilation are called run-time errors. 
+These are the errors which are not detected by the compiler and produce wrong results.ex: dividing a number by zero
+
+compiler:A compiler is a translating program that translates the instructions of high level language to machine level language.
+steps:
+-Lexical Analysis:which breaks the source code into tokens, such as keywords, identifiers, operators, and punctuation
+-Syntax Analysis:
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+important points
+1. java is not 100% object oriented- oo means it should only revolve around objects, but java supports primitive datatypes, wrappper classes, which wraps primitive data types into an object of that class
+2.pointers are not used in java - java mainly known for simplicity, JVM is responsible for memory allocation implilicitly, in order to avoid direct access to memory by the user, pointers are discouraged in java
+3.JIT compiler- java source code , what developers write , is  converted into byte codes by java developer kit( using javac.exe) , then using JRE(java runtime environment) execute sjava program nad using interpretor and JIT(just in time compliler)  conversion of bytecode into  machine code
+4.string immutable in java - because of concept called as string pool or elese shared refence can be changed from anywhere, security purpose
+5.marker interface - is an empty interface, having no data members and member function , ex: public interface cloneable{ }  , purpose is to provide info to JVM in runtime , so that it can perform some actions based on info recived
+5.we cant override private and static method - why? because in private private  method is mot accessable there, in overode we create anther private class with the same name in the child class
+                                                                                     - for static method in static if we create same return type and same method argumnet, then it will hide the superclass method - called as data hiding
+6..Finally method is used in exceptional handling , to handle errors , ---> 2 cases where finally will not execute - 1. when system.exit, 2.system crash
+7.java object class - java.lang.class
+   clone()- creates nd returns copy of this object
+  equals(object obj) - indicates whether some other objects are equals to this one
+  finalize()  throws throwable - 
+ getClass() - returns the runtime class of the object
+ hashCode() - return hash code value
+ toString() - string representation
+
+8. make a class immutable -  class as final
+                                                 - make all feilds as private
+                                                 - dont provide any setter for variables
+                                                 - make muatable feilds as final so that values can be assigned only once
+                                                 - initialize all feilds via constructor
+                                                 - cloning objects by a getter method to return a copy
+9.singleton - is a class whose only one instance can be created at any given time , in one JVM
+ ex: public class Animal{
+         private static Animal single_instance= null;
+         private Animal()
+         {}
+         public static Animal.getInstance() 
+         {
+         if(single_instance == null)
+          single_instance= new Animal();
+          return single_instance;
+          } }
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+Collection Framework
+1. Collection Hierarchy-
+* Collection - interface is the root of collection heirarchy - java.util.collection - java collection framwork- most of the collectiom in java is interited from this interface except the map interfa
+three basic interface - list ( java.util.List) - contains ordered elements, map include duplicates,  supports index based search , random access but elemnts can be easily insserted inrrespective of the position
+                                       - Set(java.util.Set) - doesnt define an order for the lement hence index based search is not supported , dosent contain duplicates.
+                                       - Queue( java.util.Queue) - follows FIFO - element ass at rear end nd removes at front end
+MAP- java.util.Map - represents a key, value pair ,  it only contains unique key, can have duplicate values
+ex:package Java;
+
+//import hashmap utility class
+import java.util.HashMap;
+
+class Hashmap {
+    public static void main(String[] args) {
+
+        // hashmap object called as capitalcities
+        HashMap<String, String> capitalcities = new HashMap<String, String>();
+        capitalcities.put("India", "Delhi");
+        capitalcities.put("England", "London");
+        capitalcities.put("germany", "Berlin");
+        capitalcities.get("England");
+        System.out.println(capitalcities);
+        capitalcities.get("England");
+
+    }
+}
+
+// o/p: {germany=Berlin, England=London, India=Delhi}
+
+List Interface - ArrayList - Dynamic resizing - 50% of original size , non synchronized
+                           LinkedList- implements List nd Dequeu intefaces , maintains insertion order, non synchronized, does not support accesing random elements, uses ListIterator to iterate through the LinkedList elements
+                            Vector- is a synchronized - thread safe , multiple threads can work togather , vector increase its size by doubling the array size, its a legacy class
+                            Stack - lifo - elements added and removed from rear end
+
+Interface- blueprint to class behaviour. Used for abstraction, 
+Set interface
+Sorted set interface - all elemenets are stored in sorted order
+3 classes are hashset
+                        Linked Hashset
+                        Tree set
+
+Hashset: implicitly implements hashtable, conatins unique elements, only one null element can be added, unordered as set
+Listlist Hashset - orderd version of hashset
+
+Queue interface - fifo
+priority queue- priority associated with each element
+high priority element is served before a low priority element irrespective of insertion order
+Dewue- doubly ended queue , elements can be added and removed from either end
+
+ArrayDeQue
+resisable array on addition to implemntation of the deque interface.
+
+MAP
+Hashmap: non-synchronous in nature, alows only one null key but multiole null values
+Hashtable: synchronous in nature, doesnt allow any null key or value
+soretd map- soretd in ascending order
+tree map 
+
+10. Map doesnt extend collection interface
+      Map interface in java follows key/value pair structure, where as collection interfca is to store in structured manner with spacific access mechanism
+     In collection interface add(method ) which doesnt support key value like put( method)
+    it might not extend collection interface but still is an integrated part of java collection framework
+
+11. diff b/w fail fast and fail safe interators
+     fail fast iterators: throws cocurrentModificationException ,  while one thread iterating over collection objet and other thread structura;ly modify collection either by adding removing or modifyng oobjects 
+    fail safe iterators: doent throw any exception collection is modified structurally  while one thread is iterating 
+12. Blocking queue: its like if queue is full, if we are tryinh to insert an element into thread, the compiler will block , if there is no element in the queue, if we try to access , that is why Blockingqueue concept presnt
+      concurrent and thread safe
+     Thread safe: thr o=ptocess to make our program to used multithreaded environment 
+     concurrency- ability to run multtiple programs cocurrentlt or parellely.
+
+diff b/w string and string builder
+String:Once you create a String, it cannot be changed. Any operation that appears to modify a String (e.g., concatenation) actually creates a new String object.
+ex: String str = "Hello";
+str += " World";  // Creates a new "Hello World" string
+
+string builder: ou can modify the StringBuilder object directly. It stores the sequence of characters and allows efficient modifications (like appending, inserting, or deleting) without creating new objects.
+ex:StringBuilder sb = new StringBuilder("Hello");
+sb.append(" World");  // Modifies the same StringBuilder object
+StringBuilder is not a method; it is a class in Java, specifically part of the java.lang package. This class provides an efficient way to work with strings that can be modified (mutable strings)
+
+Recursion: Recursion is a programming technique where a function calls itself to solve a problem
+Dynamic programming:Dynamic Programming is an optimization technique used to solve problems by breaking them into smaller overlapping subproblems and storing the results of these subproblems to avoid redundant calculations
+
+
+
+
+
+
+
+
+
+
+

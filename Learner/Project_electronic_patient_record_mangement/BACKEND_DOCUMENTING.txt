@@ -1,0 +1,187 @@
+PROJECT ---- HOSPITAL RECORD MANGEMENT
+****BACKEND*****
+step 1:
+-create folder backend
+-npm init - download packege JSON(JAVASCRIOT OBJECT NOTATION) files
+-npm i bcrypt cloudinary cookie-parser cors dotenv express mongoose express-fileupload jsonwebtoken validator----these are some pacakge will be used in this project
+ npm(node package manager)
+bcrypt(to hashing passoword-safety)
+cloudinary(used to store images, profile pictures that users enter)
+cookie-parser(read nd write cookie for session management)
+cors(cross origin resource sharing)-for example frontend is hosting on frontend.com and backend hosting from backend.com ,by defalult web browser will be blocking the resource sharing for secuiryu reason 
+ dotenv(env-environment variable) managing configuration variables like database, security keys, etc
+express(setting up routes for hancling HTTP request for web application)
+mongoose(defining schemas and interacting with mongoose database)
+express-fileupload(Allowing users to upload files such as images, documents, or other media.)
+JSON-webtoken(Generating tokens upon user login and verifying them to protect routes.)
+valdator(Validating email formats, sanitizing user input, and ensuring data meets specific criteria)
+
+open package.json-To start package.json on server.js
+- on script{ "start": "node server.js", "dev":"nodemon server.js"}
+-on first section "type":"module"
+
+nodemon(for automatically restarting your server when files change, you'll need to install nodemon and update your package.json scripts)
+
+
+
+step 2:
+creating app.js: import and export express
+creating server.js: import and port number listning
+---------for testing if port running npm run dev
+
+-as port number is excessable by any random, so ww"ll use config folder
+config folder
+  - config.env--here we store all the secret keys(like port number, MOngoDb url,etc)
+JWT(javascript web token)
+
+-MongoDb setup through-MOngoDb cloud Atlas, crested new project -- Health
+cruster--- username-dishashetty546, password-Disha@999
+creating connection path--- using MongoDB drivers--- then copy the path.
+creating front_end and dashboard_url ---- http://localhost:5173 nd 5174
+
+-using config for PORT accessing , importing {config} folder in app.js and testing on PORT
+
+Middlewears:
+ 1. CORS:: front_endURL : In app.js- adding front-end part and dashboard parrt
+use: MEthODS used are -GET(Retrieves data from a specified resource), -POST(Submits data to be processed to a specified resource),-PUT( Updates data on a specified resource.),DELETE(Deletes data from a specified resource)
+ 2.cookie-parser:
+Use: Parses HTTP request cookies and makes them accessible in req.cookies for session management and authentication.
+ 3. express.json:
+Use: Parses incoming request bodies with JSON payloads and makes the parsed data available in req.body.
+ 4. express.urlencoded:
+Use: Parses incoming request bodies with URL-encoded payloads (typically from HTML forms) and makes the parsed data available in req.body.
+ 5. fileUpload:
+Use: Middleware to handle file uploads via multipart/form-data, allowing the server to receive and store uploaded files temporarily or permanently.
+
+step 3:
+MongoDB: open-source NoSQL database management system that uses a document-oriented data model.
+
+connecting to database
+create a folder database
+a file dbconnection.js
+ then importing mongoose exporting url, project db name, using then and catch method for sucess and error
+
+app.js get--- db.connection()
+
+-In mongoDB connection challenge that we found was a bug in connecting to database -- solution: never use @ in password for MONGODB
+
+step 4:
+setting up cloudinary(its a clod-based-service which helps in optimization, delivery of images, video management
+
+open clousinary site; sign up
+open media drives-> settings-> API KEYS-> new API generating->
+name-cloudinary
+cloud name
+API PASSWORD
+API SECRET KEY
+
+mention everything in .env file
+connect to sever.js by importing and setting 1:03:17
+
+step 5: 
+**Model- creating message model ---messageSchema ---Messge  --for efficient data management system--like data enetering, retreiving, storing on MongoDb
+messageschema --where we take user input like name,email, message
+
+**Controller-creating messagecontroller --For Message ---to do process like request,response, next process,   if and awit approach for sucess and failure cases, 
+
+(const is used to initialize constant variables)
+(awit-- it promises to solve the issues by wait--- it can be used only inside async function)
+
+HTTP status code:
+200 ok: request has successfully reached 
+400 bad request : invalid req message, syntax errors, etc
+
+**Routes- for Message---routes for express.js( that are responsible for processing incoming HTTP requests to specific endpoints (routes) defined in your application)
+
+import router into app.js file---- because to define and organize different paths (like /users, /posts) and their functions in our web application.
+
+
+whereas we dont import controller.j in app.js becuase  it handles how data is processed and sent back to the user based on the requests made to those paths (like fetching user data or posting new content
+REALLIFE EXAMPLE:  ust like a store manager (app.js) organizes where things are displayed (router.js paths), they don’t handle each item’s details (controller.js), but rather leave that to the salesperson (controller.js) who knows how to assist customers with specific requests.
+
+Step 6:
+postman setup: 
+dowload postman extension on vs coder->sign-in-> collection name(MERN_STACK_HEALTH)-> create a folder(MESSAGE)-> request message->POST
+
+-challenge that I found while connecting through postman was not connecting to request message, solution: router.post('/send',SendMessage) instead of using './send'
+
+in postman on VS: open body-> raw->JSON:  write all the necessary messageSchema like firstname, lastname, all in double inverted coma, -> send-> look for compiler terminal -> errors
+once you enter correct firstname,lastname,phone,password,email in correct sequence, then you'll get success: true..
+If you find error in 4000 port no. ---> its becuse port is buzy, to terminate it ---use--- netstat -ano | findstr :4000
+                                                                                 ---once you find where its running
+                                                                                 --- taskkill /PID <port id>/F  (pid-process id, f-forcefully terminate)
+
+Once sucess:true:======ceck on MOngoDb database ---data collection --> u'll see the data that yiu have entered is getted
+
+
+step 7:  
+when encounetering such errors, servers, gets low, in order to handle these, we create middlewears
+-----catchasyncerrors----for aynchronous error monitoring ---import it to controller.js
+in this we tyically hanndle a synchronous errors such as -->http req,res message errors
+---> nstead of wrapping each asynchronous route handler with a try-catch block, catchasyncErrors simplifies error handling by leveraging Promises and next() to pass errors along the middleware chain.
+-> theFunction is the asynchronous function (route handler) that takes req, res, and next as paramete-
+->Promise.resolve() ensures theFunction returns a Promise, regardless of whether it explicitly returns one or not.
+->.catch(next) catches any errors thrown during the execution of theFunction and passes them to the Express.js next function, which triggers the error-handling middleware.
+
+----errormiddlewears----foer all the types of mixed errors
+-->using status code nad there error type we design the function
+500-internal server error
+1100-duplicates eg, same amail is alreday logged in
+400-json web token is entered wrong or invalid
+----or if tokenis  exoired
+then lastly return something from that code that is err.message
+
+then import /miidlewear/errormiddlewear to app.js
+then at last give app.use(errormiddlewear)
+
+then import two errors---relavent to different pages like messageController
+
+
+
+step 8:
+creating another models named userSchema.js
+-->1. import all the necseeay entitities according to the requireements
+ mongoose is for database
+validator is for validating wheather email is proper--isemail
+bcrypt for encrypting the passwords
+JWT for jst_secret_key
+-->2. defining userSchema for the user
+-->3. pre save hook is to hash the password before saving the data , 
+there is a if else loop where in id password is not modified then next else hash the password
+-->4.to compare the password and anotehr confirm password or hashed passord is compared with enterd password
+-->5.JWT WEB TOKEN----is used for authentication-->JWT IS generated and sent to the client, client will store the token
+Structure of JWT 
+Header
+Payload
+Signature
+JWT.sign(payload,SecretKey,[options]) this method will create a new jwt
+payload having unique id
+expiresIn:--
+
+
+step 9:
+creating usercontroller in controller folder
+-->1.import all necessary entities--error from console, catchasyncerrors,errorhandler, user from userSchema
+-->2.patient registration fuction
+export a asynchronous func called patientRegisters which is wrapped with catchAyncerrors to hansle any errrora
+-next line is to extract all necsssary data from request body
+-next line checks whether all the entities are present or not 
+if any feild is missing then, it    returns an error using ErrorHandler
+
+--> to check if user laredy exists or not --usin findOne
+if user alreday does then user reistered
+
+
+if no error found --then res.status(200)
+user registerd
+
+step 10:
+userRouter.js:
+import rxpress
+import patientReister form here 
+
+
+C:\Users\LENOVO\Frontend
+
+
+

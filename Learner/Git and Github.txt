@@ -1,0 +1,205 @@
+EVERYTHING ABOUT GIT:
+step 1:
+-saving a history of the project.
+-history  of the project will be saed, by what person, at what time, at what location
+-host git repository we use github
+-repository is a folder
+-maintainin history of yje project
+-dowload the git from chrome
+image lets say we have a dekstop openddwith o files
+--cammandd prompt is it dekstop
+---if I use "ls" commnd then i shows nothing --it means its empty
+---"mkir" cammand--make directory named project--mkdir project
+---use "ls" it willl list the folders inside dekstop---project
+--double click an go inside the folder-----"using cd project"----change directory
+where si this entire history been stores----that is in .git file
+----this can be accesd by 'git init"
+this initilizes an empty git repository 
+--agin us "ls" u"ll not find that ,git folder wjich stores all the history
+---use "ls -a" --this gives all the hidden files stored---"ll get .git folder visibe there
+---use "ls .git" to see whts inside .git folder.
+---use "notepad 2.c" or "touch 2.c" to ceate file
+thsi histor is no mentioned
+---"git status' to check the ststis of the thnks that we did so far----untracted file --2.c
+--taking this file to staging  area--using "git add ." to ad everything into satging area,,,,or "git 2.c" to add this particulat file changes
+--"git status" it will show particular file in green color, before it was in red color.----the are in stagin area
+---"git commit -m "this is me"" --------you'll egt  as 1 file changes, 0 insertions, 0 deletions
+--git status" nothing to commit, working tree clean
+
+step 2:
+
+--to add somthing in this file------"vi 2.c"
+add somthing in it...made some changes
+---"cat 2.c"---to check what all the contents present in that file
+---git status"  you;ll find modifies: 2.c in red color
+-- "git add." to agin the chanhes that we made just now
+---git status" modified: 2.c in green color
+if in case you staged it by mistake an you want to elete it without adding it--->"git restore --staged 2.c"
+----you'll find agin modifie: 2.c in red color---removed from stging area
+
+step 3:
+
+---"git ad 2.c"
+---git status"
+----"git commit -m "this is added "
+it gives---1 file aded , how many lines you have added(3 insertions),
+--entire history of what we did so far will be by "git log"
+----to delete the file----"rm -rf 2.c"
+---git status" ---deleted:2.c
+we can add whatever we added pr detected both
+--git add 2.c
+---git commit -m "deleted"
+
+step 4: 
+if you deleted some file by mistake want to delet it
+---if you want to delete certain history----means you want to get into yesterays code
+every chnges made have a uninqe hashcode----whatever code qw copied---that"s above changes will be remove
+--"git reset paste the unique hashcode"
+--git log---u'll be able to see only commits which are belowit
+---git satus---the history that we have delete will be in unstaged area---will be disolyed in re color
+---git add.
+--git status--------deleted :2.c is in red color
+wish i could have a way where i can store all the  changes without making seperate commit, but store it somewhre so tha whwenver i need i can access
+---git add."
+---git status
+----notepad 3.c
+---git add.
+---git status
+renamed: 2.c->3.c
+make changes ----vi 3.c
+---notepad 4.c
+---git add.
+--git status
+ remaed--
+new file->3.c
+
+all the changes I have make will be stored somewhere without getting commited usinh: 
+---"git stash"
+---"git status" ----nothing to commit
+---git log----empty
+
+step 5:
+all the things that we stored somewhere, in orer to get that bak
+---git stash pop
+everthing all the changes will be displaye here
+--git add.
+---git stash--git status --nothing to commit
+if you want to delete what is stored in stash-
+----"git stash clear"
+
+Everything about github:
+step 1:
+-create a git repository on github official website
+---attach the repository to my local project---- " git remote add origin repositoryurl "
+remote- means we are working with url, add- adding a new url , origin-unique url
+to get url that are attached to folder
+---git remote -v
+url(feth)
+url(push)
+---push the change that we have made----> "git push origin master"
+git-commant, push-pushiing the changes, origin-which url you wnat to push, master-is a branch name
+refresh the github official page
+---3.c file in our git repository
+
+step 2:
+what are branches?
+making some random commits
+--notepad 4.c
+---git add.
+--git commit -m "hotels"
+--git status
+
+--notepad 5.c
+--git add.
+--git comit -m "resturant"
+--git status
+
+making changes in some file:  vi 4.c
+--git add.
+--git commit -m ""
+--git status
+
+--git log 
+
+------they are commited in branched structure----
+this branches are known as main/ now called as master
+
+--creating a new branch --" git branch feature"
+---changing the head to branch created that is feature---"git checkout feature"
+headis the pointer--which poinnts on the one where the changes acyually occures
+
+--git commit
+
+step 3:
+when someone elese is working on our project that we created--usimg branch name ---feature
+---now you too want to work on same project then ----use our main/ master branch ---"git checkout main"
+---git commit
+
+----if its like merging the code that some oher users have written that is now finalized-----
+--git  merge feature
+merging the branches--main and feature
+
+if we dont have permsiion to ad features into someone's code in  git---to contribute to it
+-- click on fork
+--the folders/project will get open on your project/directory in git
+--use "git clonerepositoryurl"
+if youa nwt to read what mssage is preesnt inthe commits
+---"cat foldername"---say foler name is p.text
+add the usl oof the forkedrepository also called as upstream 
+
+--"git remote add upstream urlofthatforked"
+now check which all the url are attched o that folde
+--"git remote -v"
+
+add some lines to that folder
+--vi p.text"
+
+--git status
+--some motified files
+
+step 4:
+chaninging branch name practice:
+--git branch disha
+--git checkout disha
+now head will point to branch named disha
+--git add.
+--git commit -m ""
+
+-git log
+
+push the chnges that we made to the branch that we created
+
+-"git push origin disha"
+
+referesh the git page--you"ll be getting a pull request
+--click on create a pull request
+
+step 4:
+merging all the commits that are madeinto one
+--they are called by words scouch, pick
+
+-create 2-3 files- add and commit them 
+-to add and commit at the same time we use--"git add.; git commit -m "---"
+-then "git rebase -i thehashedcodeabovewhichyouwnattomerge"
+i means iteractive
+-then an bunch of things apears in prompt
+change all other pick to s keep one pick to keep it asplace to merge all the commits
+
+step 5:
+merge conflicts
+lets one made changes in line number 2 and another person also made changes in line number 2, git will get confused whixh one to take
+taht should be resolved manually`
+
+step 6:
+when ssh keys dont have
+--when git does allow to access permission
+
+step 7: 
+git stash 
+create a master and feature-branch , craete a file and add it to staging area, before commiting the changes git stash it
+
+
+
+
+
+

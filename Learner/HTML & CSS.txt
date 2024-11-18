@@ -1,0 +1,316 @@
+---------------------------HTML--------------------
+
+--------------------------------step1-----------------
+HTML: hyper text markup lang
+1990's
+hyper-
+text- h1 tags are ex
+markup- lang which shows the structure of doc
+
+is not a programming lang, to structure pages
+HTML, XML
+
+HTML/HTML4            HTML5
+
+new features in HTML 5 then HTML
+1. new semantic elements- <header>, <nav>, <article>, <section>, <footer>
+2.form input type- 
+3. Audio and video support -<audio>, <video>
+4. mobile compatible
+5.simpler
+
+diff b/w XHTML AND HTML
+
+seperate markup language
+XHTML- combination of XML and HTML .
+
+ HTML-more lenient syntax rules--EX: closing tag is not mandatory
+XHTML- stricter syntax rules--EX: closing tag is mandatory
+
+HTML-not case sensitive --<DIV> <P>
+XHTML- case sensitive
+
+HTML- widely supported by browsers
+XHTML-limited support by browsers
+
+syntax:
+DOCTYPE refers to version --> this doctype means HTML-5     
+
+so without using doctype we can get desired output, but they cant validate the version of html, lead to comaptibility issues
+
+diff b/w head nd body in html-->
+head we mention, title, meta link, script
+style are kept under html
+
+body--p,h,img,a under body element
+
+title - tiltle /name of a web page
+
+advantages of title tag:
+window title
+seo(search engine use)
+bookmaark
+social media sharing
+
+meta tags/ types
+gives additional info about any web pages
+
+types
+charset
+veiwport
+description
+keywords
+author.
+
+charset: character from diff lang is displayed correctly in brrowser
+viewport:mobile friendly responsive web pages
+description: search engine use this as search results
+keywords:optional
+author info : optional
+
+element and tags in HTML
+
+EX: <p> HELLO I AM DISHA </P>  --- element
+       <p> - openeing tag
+       </p> - closing tag
+       contents
+
+The <div> tag in HTML : 
+- in structuring web pages
+- is a block-level container that groups together content and allows for the application of CSS styles and JavaScript functionality
+
+roles:
+-Content Grouping
+-Layout Structure
+
+div nd span
+-The <div> tag is a block-level element used to group larger sections of content
+-The <span> tag is an inline element used to group small portions of text or other inline elements
+
+here 
+
+some elemets / tags in HTML:
+<header>-Defines introductory content or navigational links
+<main>-Represents the main content of the document
+<footer>-Defines the footer for a document or section
+<address>-Provides contact information
+
+--The <section> and <article> elements in HTML are both semantic elements used to organize content
+
+commenly used tags in HTML :
+
+<!DOCTYPE>	Declares the document type and version of HTML used.	<!DOCTYPE html>
+<html>	Root element of an HTML page.	<html lang="en">...</html>
+<head>	Contains meta-information about the document.	<head><title>Page Title</title></head>
+<title>	Sets the title of the document, shown in the browser tab.	<title>My Website</title>
+<meta>	Provides metadata about the document (character set, author, etc.).	<meta charset="UTF-8">
+<link>	Defines a relationship between the current document and external resources (like stylesheets).	<link rel="stylesheet" href="styles.css">
+<style>	Contains internal CSS styles for the document.	<style>body { font-family: Arial; }</style>
+<body>	Contains the content of the HTML document.	<body>...</body>
+<h1> to <h6>	Headings of different levels (1 is the largest, 6 is the smallest).	<h1>Main Title</h1>
+<p>	Defines a paragraph of text.	<p>This is a paragraph.</p>
+<a>	Creates a hyperlink to another webpage or resource.	<a href="https://www.example.com">Visit Example</a>
+<img>	Embeds an image in the document.	<img src="image.jpg" alt="Description">
+<ul>	Creates an unordered list (bulleted).	<ul><li>Item 1</li><li>Item 2</li></ul>
+<ol>	Creates an ordered list (numbered).	<ol><li>First item</li></ol>
+<li>	Defines a list item within <ul> or <ol>.	<li>Item</li>
+<div>	A generic container for grouping and styling content.	<div class="container">Content here</div>
+<span>	A generic inline container for styling a small section of text.	<span style="color: red;">Red Text</span>
+<table>	Defines a table.	<table><tr><td>Data</td></tr></table>
+<tr>	Defines a row in a table.	<tr><td>Row Data</td></tr>
+<td>	Defines a cell in a table row.	<td>Cell Data</td>
+<th>	Defines a header cell in a table.	<th>Header</th>
+<form>	Creates an HTML form for user input.	<form action="/submit" method="post">...</form>
+<input>	Defines an input field in a form.	<input type="text" name="username">
+<button>	Creates a clickable button.	<button type="submit">Submit</button>
+<label>	Defines a label for an <input> element.	<label for="username">Username:</label>
+<footer>	Defines a footer for a document or section.	<footer>Footer content here</footer>
+<header>	Defines a header for a document or section.	<header><h1>Header Content</h1></header>
+<main>	Represents the main content of a document.	<main>Main content goes here</main>
+<article>	Represents a self-contained piece of content.	<article>Article content here</article>
+<section>	Defines a section in a document.	<section><h2>Section Title</h2></section>
+
+-----------------------------------------------step2-----------------------------------------------------
+
+root , parent, child , nested elemets
+
+ROOT --- HTML is root tag
+PARENT --- HEAD 
+     CHILD --- TITLE
+                       LINK
+                       SCRIPTS
+PARENT ---BODY
+     CHILD--- P
+                      DIV
+                      IMG
+
+empty elements
+ex/; <img> , <input> , <br> , <hr> ...etc
+- they are self closing tags
+-doesnt need contents b/w openigna nd closing tags
+
+Semantic elements in HTML- elements that provide meaninf ro the contenst it contains
+EX: FOOTER, MAIN, SECTION, ARTICLE
+
+HTML TAGS CAN BE IN UPPERCASE
+
+BLOCK LEVEL ELEMENTS ND INLINE ELEMENTS
+-BLOCK LEVEL -- creates block of contents
+EX: P,TABLE,FORM ETC
+-INLINE ELEMENTS---depends on its content length
+EX: IMG,BR,SPAN
+
+html attributes   and types
+-provides additional info
+types - 
+          -common attributes(global attributes)
+ex: class id, data
+
+         - specific attributes
+href src alt width height target
+they are specific
+
+id attributes is to uniquely identify any attributes
+primary purpose is to allow js nd css to target and manipulate elements.
+
+style attribute is to apply inline styles directly to individual elements.
+class attribute is used to group together multiple elements taht share comon styles
+two elements cant have smae id name, but externally it will not show any kind of errors, but it is invalid at the end
+
+multiple classes for a single attributes is allowed ,
+if while styling if we use same styling featurings for both the classes , class mentioned last will get preference
+
+data attributes in HTML--data prefix for additional info.
+
+
+------------------HTML links and navigation-----------------------------
+5 types of links in html
+anchor link - a tag - mostly used to navigate from one page to other
+image link
+bookmark link
+email link
+external  resource link
+
+absolute and  relative url 
+absolute--complete link of any website
+relative--incomplete url
+
+<nav> it provides semantic clarity
+if we deploy our application in future for seo purpose , they'll get the structure of our web
+
+fragement identifeirs in html-- href="#section1"  it will go to that particular section of that page
+
+<base> element in html--to get a common url for all the pages
+ex: before-- base page1.html
+      after base--abc.com/page1.html
+
+---------------------HTML lists and tables---------------------------------------------
+
+types of lists
+ordered  --ex:  1.list1
+                           2. list2
+unoredered--ex: *list1
+                               *list2
+description list--ex:team1 
+                                              description 1
+                                   team2
+                                             description 2
+nested list-- is a list inside another list
+
+table, tr, td elements
+<table> contsiner for entire table
+<tr> to get table in the form of rows
+<th>represent in column header
+<td>regular cells in table
+
+styling and structured data
+
+colspan- merging multiple cells horizontally into a single cell
+applicable for th and td-- we cant mege multiple rows using colspan
+
+border to a table--
+
+-------------------------------------------CSS------------------------------------------------------------------------
+
+basics and implementation
+
+css and 5 types or ways to implement in html
+style sheet lang
+-cascading style sheets
+
+inline styles
+internal style sheets
+external stylesheets
+@import rule
+css preprocessor
+
+advantages- seperation content(HTML) styling(css)
+reusability
+structured
+devices 
+speed
+
+scss/sass- syntactically awesome stylesheets--file_extension.scss
+LESS- file_extension.less
+stylus- file_extension.styl
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                              
+
+
+
+
+
