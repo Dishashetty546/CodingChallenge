@@ -121,13 +121,13 @@ TCP/IP model
 
 layers are reduced here:
 
-Apllication layer
+Application layer
 Transport layer
 Network layer
 Data link layer 
 Physical layer
 
--------APPLICATION LAYER------------
+-------APPLICATION LAYER-----------------------------------------------------------------------------------
 -users interact here
 - whatsapp,etc
 -where--devices
@@ -150,6 +150,70 @@ its a 2 port device
 Hub--> its  a multiport device,it connects multiple wires  coming from different branches.
 
 
+
+------------------TRANSPORTATION LAYER--------------------------------------------------------------------
+
+Let say we are using some messanger website, we write some message and send it to some messenger application , it is sent to person we wanted to
+one msg sent from one computer to another is work of transportation
+transport layer - layer which does this transportation process is termed as transport layer.
+
+within the same device data transfirm happening through transport layer.
+b/w two corrier companies from diff countries is network layer
+
+transport layer - working on its own device., then transfer data to network layer
+
+transport layer is present in our own laptop
+
+protocols in Transport layer -  TCP(transport control protocol) - if we want to transport data exactly same to same, with acknowledgement, oredered data packets
+
+ex: a friend sending diff application to your system - that is through network layer
+once applications reached our system, then those applications need to be transmitted to its own loc - transport Layer
+
+types of data receiving
+
+multiplexing and demultiplexing
+
+sending all this through multiplexer, then passed through demultiplexing
+internally how?, we refer machines through IP addresses, we refer applications through port numbers, sockets are like gateways to connect two applications and networks
+data travel in packets, using IP addresses they decide to which data it need to be connected to
+
+transport layer takes care of congestion control - its like when so many peoeple try to get int to same space
+
+congestion control happens in transport and network layer using some congestion control algo built in TCP
+
+message -
+file -
+vc -
+
+what if data get corrupted or lost?
+
+using checksums - its a random number
+using algorithms , sender will calculate the checksum value, and reveiver cal the checksum using same algo, if value is same , then no error
+
+how to know if packet reveieved ?
+timers
+
+how to avoid duplicate values when packet gets lost or not sent?
+sequence number , its a unique id for identification
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+protocol
+
+TRANSPORT LAYER - TCP/UDP
+NETWORK LAYER - IP
+APPLICATION LAYER - HTTP
+
+UDP - (USER DATAGRAM PROTOCOL)
+data may or may not be delivered, data may be changed on the way
+data may not be in oredered
+
+//email do not use UDP ,if it does data would have corrupted or lost
+its a connectionless protocol
+
+UDP - uses checksums
+
+UDP PACKETS: 
 
 
 
