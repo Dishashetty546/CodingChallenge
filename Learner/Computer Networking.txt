@@ -2,7 +2,7 @@
  Internet: connecting two or more computers
 TCP-transmition control protocol
 Protocol: sending a email to someonr will require some steps, or talking to a friend, maybe convaying some msg through video--> thses all should be conveyed in someway, like data should be transferred fully without any glitch or small glitch is fine --> these are termed as protocol
-UDP
+UDP - user Datagram protocol
 IP-internet protocol
 
 WWW-world wide web--by timp burner
@@ -214,6 +214,39 @@ its a connectionless protocol
 UDP - uses checksums
 
 UDP PACKETS: 
+
+STRUCTURE  -   SOURCE PORT(2 BYTES)    |    LENGTH OF DATA GIVEN(2 BYTES)
+               DESTINATION(2 BYTES)    |    CHECKSUM(2 BYTES)
+                                      DATA
+                                      ()
+
+Whole structure is made of 2^16  bytes of memory
+data is made of 2^16 - 8 bytes 
+
+use cases of UDP - its very fast
+                 -  video lang apps 
+                 -  dns -> udp 
+                 -  gaming
+
+TCP - TRANSMISSION CONTROL PROTOCOL
+
+TRANSPORT LAYER PROTOCOL :
+application layer sends lot of large data 
+
+TCP - segments the data, divide the data, add headers , it may alse collect the data from network layer 
+      congestion control
+      takes care of, when data is not arrived, maintains the order of data
+
+ex: email, pdf, web browsing
+
+features: 
+*connection oriented - first connection has to be setted up then , send the data
+*error control
+*congestion control
+*full duplex 
+
+
+
 
 
 
