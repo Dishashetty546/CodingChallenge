@@ -72,4 +72,9 @@ class ListNode {
     public String toString() {
         return String.valueOf(val);
     }
+
+    public int length() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'length'");
+    }
 }
