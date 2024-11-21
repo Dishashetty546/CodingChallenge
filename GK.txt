@@ -1,0 +1,44 @@
+-------------------------------------------------------------computer essential parts-----------------------------------------------
+
+1. case
+2.power supply
+3.mother board
+4.cpu 
+5.RAM
+6.Hard Drive
+7.Graphics card
+
+
+case: plastic box,
+its an enclosed surface for all the hardware cadgets
+
+power supply: present on lower part of any computer, regulates power
+
+Mother board: circuit board,which communicates b/w all components, realtively cheap
+
+cpu: central processing unit or processor 
+     does things
+     dont do storing of data things
+     most of our programs essentially run from.
+     they are known as "BIG BRAIN OF COMPUTERS"
+     everything thats happening goes to CPU at some point
+
+RAM: random access memeory
+     small storage space
+     fast access points
+
+Hard Drives:Disk drives or D- drives, storage
+            data/files actually stored
+            large data storage space
+            but, slow access
+
+ex: hard drives are kind of large storing garege area, where finding things would be difficult , wheras RAM small storage area, kind of small shop where finding things is essentially
+
+Graphics card: GPU : graphics processing unit
+                     one's and 0's shoudld be constantly getting updates into bunch of animated videos and photo contents, and display this on moniter
+                     standalone computer
+
+ex: displaying a 3d video in a game, CPU will be doing this by collecting info from RAM, RAM gets data by figuring out from Hard drives, then graphic cards knows how and when to display all these
+
+
+
