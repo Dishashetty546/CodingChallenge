@@ -2,7 +2,7 @@ package LEETCODECHALLENGE; //--
 
 import java.util.*;
 
-//FIND MAJORITY ELEMEN
+//FIND MAJORITY ELEMENT
 
 public class THREE {
     public static void main(String[] args) {

@@ -13,8 +13,8 @@ package LEETCODECHALLENGE; //*
 
 public class ONE {
     public static void main(String[] args) {
-        int[] nums1 = { 1, 2, 3, 0, 0, 0 };
-        int m = 3;
+        int[] nums1 = { 1, 2, 3, 6, 0, 0, 0 };
+        int m = 4;
         int[] nums2 = { 2, 5, 6 };
         int n = 3;
         merge(nums1, nums2, n, m);

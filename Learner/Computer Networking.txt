@@ -245,6 +245,88 @@ features:
 *congestion control
 *full duplex 
 
+3-way handshake
+
+ex: client    ----->   server
+    while this,SYN flag nd sequenece np. is also sent 
+    sequence number - is  for security purpose, its a unique digit another is to  avoid duplicates messages
+    then it will send back acknowledgement flag, with diff sequence number  -- along with another sync message
+    along with sequence number, there is acknowledgement number
+    acknowledgement number = prev sequence num + 1
+
+----------------------------------------------------------------------------------------------
+---NETWORK LAYER------------
+Transport lsyer - data travels in segments
+network layer - data travels in packets
+data link layer - frames
+
+here we work with routers - part where data travels across the world
+
+forwarding table - hop-by-hop forwarding - these are inside router
+there is something called routing table - inside it we have forwarding table
+
+ex: 192.168.11.23 - in this 192.168.11 - is a network address
+                            23 - is a device address
+
+
+control plane 
+ex: think there are n no. of routers in our locality, if someone adds a new router, how does this get updated in forwarding table
+
+control plane - routers--> are nodes links b/w these is edges
+
+types of routing - static routing and dynamic routing 
+
+static - manually adding these addresses on to table
+dynamic - 
+to find various routes in network we  use algo like bellmanford, dikstra's
+
+---------------------------------------------------------------------------------
+
+protocols in network layer
+
+IP - internet protocol
+IP address - IPV4 - 32 bit numbers, 4 words
+             IPV6 - 128 bits 
+
+ex: 192.168.11.23 
+ in this 192.168.11 - network address or subnet id
+         23 - device address or host id
+
+
+class of IP addresses
+
+Class A, class B, class C , D , E
+
+reserved IP addresses
+127.0.0.1
+loopback addresses
+
+localhost - it is always up, designed for testing for developers
+
+-----------------------------------------------------------------------------------
+packets - header is of 20 bytes
+consist of Ip version, total length, Identification num, flags, protocols, checksum, addreses, Time to leave
+
+------------------------------------------------------------------------------------
+IPV6
+
+ipv4 - 2^32 = 4.3 billion
+ipv6 - 4 times larger then ipv4 - 2^32*4 = 2^128 = 3.4*10^38
+
+cons: not backward compatible
+      lot of effors , hardware works
+
+      that is why entire world didnt shift for IPV6
+
+representation:
+16 bit hexadecimal string
+-----------------------------------------------------------------------------------
+
+
+
+
+
+
 
 
 
