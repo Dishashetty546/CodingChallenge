@@ -5,6 +5,7 @@ package LEETCODECHALLENGE;//*
 //using array method
 //in array, we cant remove elements directly,
 //so we , take element in last index, then decrement the len 
+
 public class TWO {
     public static void main(String[] args) {
         int[] nums = { 1, 2, 2, 3, 4 };

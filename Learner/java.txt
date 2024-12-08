@@ -72,7 +72,7 @@ using values:   al.remove(Integer.valueOf(1));
 using iterators: int x = (Integer)itr.next(); 
             if (x < 10) 
                 itr.remove(); 
-        } 
+    
 ------------------------------------------------------------------------------------
 3. to replace an elemet at specific position: ArrayList set() method
   int i = arrlist.set(3, 30); 
@@ -329,7 +329,38 @@ StringBuilder is not a method; it is a class in Java, specifically part of the j
 Recursion: Recursion is a programming technique where a function calls itself to solve a problem
 Dynamic programming:Dynamic Programming is an optimization technique used to solve problems by breaking them into smaller overlapping subproblems and storing the results of these subproblems to avoid redundant calculations
 
+------------------------------------------------------------------------------
+SPRING IN JAVA
 
+IOC - INTERVERSION OF CONTROL -      responsibility to someone 
+
+springbean factory - it will create objects, all the previous data stored in springbean.xml file
+this will be referred each time user make any request
+
+steps
+1. triangle, circle
+2.drawing app
+3. shape
+4.Add soring framwwork for work space
+5.  add to spring beans, creates a springbean.xml file
+
+bean fatory - application context - which is sub interface of bean factory  
+
+application context advantages
+it can direactly read design file, but can extend projcet File
+
+---------------------------------------------------------------------------------------------------------
+
+1. java is platform independent
+2. JDK,JRE,JVM
+3. static public void main - dont give any errors, coz java dont follow any specific methood for spacifiers
+4. object clone- creating an object entirely simpilar to objects presnt before
+5. java is not ccomplete oop lang
+6. wrapper class, clone class, 
+7. singleton class - class having single object, that object need to have global access
+8. package in java - collection of buddle of classes, interface, necessary libraries, JAR files, use if code reusability
+9. jvm is to memory management implicitly, java was created with a moto of simple lang, hence accessing values directly is n't included as featuee, so pointer is nt there 
+10. java string pool - collection of string called as string pool
 
 
 

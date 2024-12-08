@@ -52,7 +52,7 @@ on loop it transform from 0% to 100%
 ---> biogarphy----- design the about section ----> with <p> tag <imageurl>
 --->department---->  use of react-multi-carousal----->go to site--->A carousel in web pages (often referred to as an image carousel or slider)--> we are not designing it entirly---> used ready made one ---> import statement of  2 lines from react-multi-carousl
 
-- in department section----1. firts we ceate an department array with const department () this indicates it doesnt take ant parameters
+- in department section----1. first we ceate an department array with const department () this indicates it doesnt take ant parameters
                                                   2. create a const named responsive for the carousal ---bsed on screen size how many pages it can display--- max of 3000 width to 2000 width it can display 4 images---> to make it responsive---it sets size depending on tablets, mobiles
                                                   3. returns --> container with header department --> carousal componnets--> it sets the size by extralarge, large, small-->  ecah department in card are given with name, image
 

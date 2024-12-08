@@ -71,3 +71,14 @@
 // undefined
 // 2
 // ehbywrhbFhey there
+
+//---------------------------------------------------------------------------
+//HTTP SERVER - hyper text transfer protocol
+// const http = require("http");
+// const myServer = http.createServer((req, res) => {
+//   console.log("New req rec");
+//   //   res.end("hello");
+// });
+// myServer.listen(8000, () => console.log("Server started"));
+
+//server started
