@@ -1,0 +1,18 @@
+---------------------INTRO----------------------------------------------------------------------
+
+database - collection of any set of information ex: shopping list, phone book
+dbms - its a special software prog that helps users ti create, maintain database
+it makes easy to handle large amount of info, security, backups, concurrencyetc
+
+its not a data directly , its a software which interact with data in oredr to create read update and delete info
+
+CRUD - create read update delete
+
+types of database - relational database(SQL) - mySQL, oracle, postgresql             non relational database(Nosql) in the form of JSON , XML - MongoDB, dynamodb, firebase
+
+queries - request made to database managment system for specific info - ex: google search is a query
+
+--------------------TBALES AND KEY --------------------------------------------------------------
+
+
+

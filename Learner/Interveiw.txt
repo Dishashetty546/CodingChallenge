@@ -18,6 +18,9 @@ GEEKSFORGEEKS
 6.ratio and proportion -/
 7.time and work -/
 8.Ages -/
+9.Boat and speed -/
+10. HCF and LCM
+
 
 -----------------------------LOGICAL REASONING-------------------------------------
 
@@ -29,14 +32,15 @@ GEEKSFORGEEKS
 ----------------------------SKILLS INTERVEIW PREPS----------------------------------------
 HTML -/
 CSS   -/
-JS    -
-JAVA -
-C -
-REACT -
+JS    - /
+JAVA - /
+C - /
+REACT - /
+NODE JS
 
 GIT AND GITHUB -/
 OS -
-
+CN -/
 ------------------------------Communication skills --------------------------------------------
 
 

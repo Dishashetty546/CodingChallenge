@@ -361,12 +361,17 @@ it can direactly read design file, but can extend projcet File
 8. package in java - collection of buddle of classes, interface, necessary libraries, JAR files, use if code reusability
 9. jvm is to memory management implicitly, java was created with a moto of simple lang, hence accessing values directly is n't included as featuee, so pointer is nt there 
 10. java string pool - collection of string called as string pool
-
-
-
-
-
-
+11. final - pre-defined, the varaieble or instance declared with final keyword will remain same throughout the program
+12. main() without static - main is known for start of any program, if its not statatic code will run but it might lead to ambiguity and can cause error like nomodulefound
+13. JDK(java development kit) - combined package of JRE(java runtime environment) and JVM(java virtaul machine) oracle has some JDK varients - JDK standard enterprose - for noral users, students
+                                                                                                                                               JDK enterprise edition - for developers
+                                                                                                                                               JDK micro edition - 
+14. ACcess specifiers: its is to decide scope of variavlr, method and a class - public, private, protected, Default access specigiers
+15. constructor : automatically called during object creation , it can return a value implicitly , currnt instance id class is returned
+16. This keyword - refers to current current class like mathod, instance,variables and constructors
+17. super keyword : refer to immeediate parent class object
+18. method overloading in java - creating multiple signatures using one method name , to varying return type  or varying num of arguments
+19. overload a static method - no, it might throw error as static method cannot be refernced
 
 
 

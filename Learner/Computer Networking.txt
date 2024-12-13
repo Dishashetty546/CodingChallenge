@@ -323,9 +323,46 @@ representation:
 -----------------------------------------------------------------------------------
 
 
+INTERVEIW PREPS - 50
 
+1. HUM  - connect2 or more ethernet devices
+   SWITCH - connects 2 or more lan devices
+   ROUTER - connect LAN and WAN
+2. Link
+3. node
+4. backbone network - interconnects various parts of the network to which it belongs
+5. Network topology - layout of computer network - types - bus,mesh,star, tree,ring,pooint-to-point,hybrid 
+   bus - all the devices share a common communication line 
+   star - all nodes connected to center unit
+   ring - each node connected exactly to 2 devices
+   mesh - connected to 1 or more devices
+   hybrid top - connected to more then one topology
+   point-to-point - network conneceted to 2 divices may be computers,servers
+6.LAN - Local area net - n/w b/w two or more devices in an local area, ex: In a lab it it connected to computers, printers, servers etc
+  protocols - set of rules nd regulations 
 
+7.Routers - set of data packets within a network, part wjere twp or more networks meet 
+8. point to point - network connected to 2 or more devices may be computer, severs etc
+9. OSI(OPEN SOURCE INTERCONNECTION)
+   7 LAYERS - APPLICATION,Presentaion,Session,NETWORK,TRANSPORT,DATA LinkLAYER, PHYSICAL LAYER
 
+10. physical layer - symbol - transfer data bits
+    data link layer - frame - tranfer data framrs b/w nodes connectede by physical layer
+    n/w layer - packet - manages n/w  woth multiple nodes
+    transport layer - segment - data packets transmission b/q diff points of the n/want
+    session - communication session
+    presentation layer - data b/q service device and application debives
+    application layer - 
+11. Anonymous FTP - user to access data which is in public, so that user no need to identify to the sever and has ro log in as anonymous 
+    
+12. connection b/q diff devices ex:twistered cables, wireless - radio signals
+13.subnet mask - range of Ip address can be used in partivular nw
+UTP CABEL - 100 OHM
+14. UTP cable - 100 ohm cable, cable this are immune electrical noise
+                100 m - used in telephone wiring and local area n/want
+
+15.  HTTP
+16. NAT - network address translation - 
 
 
 
