@@ -82,3 +82,22 @@
 // myServer.listen(8000, () => console.log("Server started"));
 
 //server started
+//----------------------------------------------------------------------------
+
+//module  based project idea is to make specific task in spacific space,  while we can use that in other program as well
+//we can use it using require keyword
+
+// then export it
+
+//ex: file name - file.js
+// function file(a, b) {
+//   return a + b;
+// }
+// module.exports = file;
+
+//file: hello.js:
+// const file = require("./file");
+// console.log("hello", file(2, 4));
+
+//-----------------------------------------------------------------------
+//URL - UNIFORM RESOURCE LOCATOR

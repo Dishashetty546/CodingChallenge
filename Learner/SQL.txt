@@ -12,7 +12,122 @@ types of database - relational database(SQL) - mySQL, oracle, postgresql        
 
 queries - request made to database managment system for specific info - ex: google search is a query
 
---------------------TBALES AND KEY --------------------------------------------------------------
+--------------------TABLES AND KEY --------------------------------------------------------------
+primary key, and tables 
+--------------------SQL basics--------------------------------------------------------------------------
+SQL(structural query language)
+
+data query lang(DQL)
+data defination lang(DDL)
+data control lan(DCL)
+data manipulationlan(DML)
+
+query: set of instruction given to RDBMS(written in SQL) that tells about what info you want it to retreive
+
+there will be tons of data in db, goal of query is to get data which we need
+-----------------------------------------------------------------------------------------------------------------
+CREATING TABLES
+
+datatypes - int - Whole numbers , decimal(m,n) - decimal value exact numbers , varchar(1) - string of text length 1, BLOB - binary large object holds large data , DATE - 'YYYY-MM-DD', TIMESTAMP - 'YYYY-MM-DD HH:MM:SS' 
+
+EX: CREATE TABLE STUDENT(
+  NAME VARCHAR(20),
+  USN VARCHAR(20),
+  PRIMARY KEY(USN)
+  );
+
+  get an explanation of the table : DESCRIBE TABLE;
+-------------------------------------------------------------------------------------------------------------------
+delete a table created
+
+DROP TABLE orders;
+
+  -----------------------------------------------------------------------------------------------------------
+  INSERTING DATA INTO TABLES
+  INSERT INTO STUDENT VALUES('DISHA','4SF22CI030');
+  --------------------------------------------------------------------------------------------
+
+TO MAKE SOME ENTITY ON THE TUPLE NEVER BE NULL VALUES
+
+CREATE TABLE EMPLY(
+  NAME VARCHAR(20) NOT NULL,
+  SSID VARCHAR(20),
+  PRIMARY KEY(SSID)
+  );
+
+  INSERT INTO EMPLY VALUES(NULL,'4SF22CIO2I');
+
+Error: NOT NULL constraint failed: EMPLY.NAME
+
+---------------------------------------------------------------------------------------------------------------
+TO DISPLAY WHOLE TABLE 
+SELECT * FROM STUDENT;
+----------------------------------------------------------------------------------------------------------------
+IF YOU WANT TO ADD A DEFAULT VALUE, IF SOMEONE IS NOT ADDED HIS OR HER NAME
+
+USAGE OF AUTO_INCREMENT
+
+CREATE TABLE EMPLYSS(
+  NAME VARCHAR(20) NOT NULL,
+  MAJOR VARCHAR(20) DEFAULT 'CSE',
+  SSID VARCHAR(20) AUTO_INCREMENT,
+  PRIMARY KEY(SSID)
+  );
+  -----------------------------------------------------------------------------------------------------------------
+  UPDATE 
+ UPDATE STUDENT
+ SET MAJOR='CSE_DEPT'
+ WHERE MAHOR = 'CSE';
+
+ UPDATE Shippings
+SET status= 'Delivered'
+WHERE shipping_id = 1;
+
+------------------------------------------------------------------------------------------------------------------------
+delete
+
+DELETE FROM Shippings
+WHERE shipping_id =1;
+------------------------------------------------------------------------------------------------------------------------
+SIMPLE QUERIES:
+SELECT C.first_name
+FROM Customers C;
+
+---SELECT C.first_name
+FROM Customers C
+ORDER BY customer_id ASC;
+
+---SELECT C.first_name
+FROM Customers C
+ORDER BY customer_id DESC;
+
+---------------------------------------------------------------------------------------------------------------------
+Company database
+
+STEP : CREATE TABLE
+
+CREATE TABLE employee(
+  emp_id INT PRIMARY KEY,
+  first_name VARCHAR(20),
+  last_name VARCHAR(20),
+  birth_date DATE,
+  sex VARCHAR(1),
+  salary INT,
+  super_id INT,
+  branch_id INT
+  );
+
+  
+  
+  CREATE TABLE branch(
+    branch_id INT PRIMARY KEY,
+    branch_name VARCHAR(20),
+    mgr_id INT,
+    mgr_start_date DATE,
+    FOREIGN KEY(mgr_id) REFERENCES employee(emp_id) ON DELETE CASCADE
+    );
 
 
+    --WE FORGOT TO ADD BRANCH_ID AS A FOREIGN KEY ON EMPLOYEES TABLE
 
+    
