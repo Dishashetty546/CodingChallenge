@@ -1,4 +1,4 @@
-//------------------Cron job - he frequency or interval at which the job runs (e.g., daily, weekly),is to schedule the events , here ***** , each star indicates, 1st one days of week(0-6), then months, thenday of  month hour, min
+//------------------Cron job - he frequency or interval at which the job runs (e.g., daily, weekly),is to schedule the events , here ***** , each star indicates, 1st one days of week(0-6), then months, thenday of  month, hour, min
 //runs files based on fixeds schedule
 //ex: data cleanup everynight, old data discarting, etc
 //ex:
@@ -17,6 +17,11 @@
 // Running a task every minute
 // Running a task every minute
 
+//library used is cron - advanced features
+// 5 feilds - 1. no of days in a week, 2.month, 3.days in a month, 4.hour, 5.min
+//in node js a when client request for cron job , it wont directly sent to event loop queue, instead when time arrives, it is handled to event loop, it is handled asyncronously
+//use cases are automated mail sending , cleaning up temprory files, trigerring API CALLS for updating
+//to ensure that cron job runs only onxe at a specific time using settimeout
 //---------------------------------------------------------------------------------------------------------------------------------------------
 //--------Triggers---------------------------------------------------------------------------------------------------------------------------
 //A trigger is a procedural code that is automatically executed in response to certain events on a particular table or view in a database.

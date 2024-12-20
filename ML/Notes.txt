@@ -1,0 +1,53 @@
+--------------------------------------------------------------------------------------------------------------------------
+
+ML - subdomain of computer science that focuseson algo which help computer to learn from data without explicit programming
+AI - area of cs where is goal is to enable computers and machines perfprm human like tasks and simulate human behavious
+DS - tjis feild attempts to find patterns and draw insights from data( might use Ml)
+
+types of Ml
+
+supervised learning - uses labaled imouts( i/p has corresponding o/p label) to train model and learn o/patterns
+ex: there is three images placed ,all these images are labelled with some name ex: cat dog lizard
+
+unsupervised learning -  uses unlabelled data to learn about patterns in data
+ex: i/p is images with no labells
+
+Reinforcement learning - agent learning in interactive environment based on rewards and penalties
+ex: robot on going rigth path gets water or wrong path gets fire
+
+supervised learning
+   inputs -> model -> output
+
+::INPUT::
+   categorial data ( finite no. of data)
+
+   nominal data( no inherent order)
+
+categorial data - convery string value to numerical value
+
+technics - ONE HOT ENCODING
+
+EX: instead of INDIA, CANADA, USA, FRANCE
+INDIA  [1,0,0,0]
+USA [0,1,0,0]
+CANADA [0,0,1,0]
+FRANCE [0,0,0,1]
+
+::OUTPUT::
+
+classification predict discrete classes - multiclass classification
+
+binary classification - positive/negative , cat/dog , spam/not spam
+multiple classification - cat/dog/dolphin, orange/apple/pear , plant species
+
+Regression - predict continuois values
+
+model
+datasets divided into traing and testing data
+testing -> model -> testing
+
+LOSS FUNCTION - L1 LOSS - LOSS = SUM([YREAL - YPREDICTED])
+
+
+
+

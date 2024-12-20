@@ -5,13 +5,10 @@ public class binarysearch {
         int[] arr = { 6, 5, 4, 3, 2 };
         int key = 5;
         System.out.println((searches(arr, key)));
-
     }
 
     public static int searches(int[] arr, int key) {
-
         int n = arr.length;
-
         int low = 0;
         int high = n - 1;
         int mid = (low + high) / 2;

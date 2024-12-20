@@ -45,7 +45,7 @@ public class FIFTYSEVEN {
     }
 
     public static void minimun(int[] arr) {
-        Map<long, Integer> index = new HashMap<>();
+        Map<Integer, Integer> index = new HashMap<>();
         for (int i = 0; i < arr.length; i++) {
             index.put(arr.get(i), i);
         }
