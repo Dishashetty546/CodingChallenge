@@ -1,0 +1,6 @@
+customer_id,name,age,email
+1,John Doe,28,john.doe@example.com
+2,Jane Smith,35,jane.smith@example.com
+3,Sam Brown,22,sam.brown@example.com
+4,Emily White,,emily.white@example.com
+5,Michael Green,40,michael.green@example.com
