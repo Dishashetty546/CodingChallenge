@@ -154,3 +154,79 @@ ADD FOREIGN KEY(branch_id)
 REFERENCES branch(branch_id)
 ON DELETE CASCADE;
 ---------------------------------------------------------------------------------------------------------------------------
+interveiw ques - 15
+
+DBMS VS RDBMS
+PRIMARY KEY
+FOREIGN KEY
+CONSTRAITS AND ITS Types
+   NOT NULL, UNIQUE, PRIMARY KEY, FOREIGN KEY, CHECK , DEFAULT
+
+DIFF TYPES OF SQL CAMMANDS 
+DATA DEFINATION language
+EX: CREATE ALTER DROP etc 
+
+DATA MANIPULATION language
+EX: SELECT INSERT UPDATE DELETE
+
+DATA CONTROL language
+EX: grant retrive
+
+TRANSACTION CONTROL language
+EX: COMMIT ROLL BACK SAVE POINT
+
+CONSTRAINTS
+EX: PRIMARY KEY , FOREIGN KEY, UNIQUE, CHECK  NOT NULL
+
+DIFF B/W DELETE DROP TRUNCATE
+
+DELETE - USED WHEN WE WANT TO REMOVE ROWS FROM A TABLE - DML
+DROP - REMOVES TABLE FROM THE DB - DDL
+TRUNCATE - REMOVES ALL ROWS FROM A TABLE - DDL
+
+diff b/w group by and order by
+group by -  when you have group a group of employees where some are hr's , mangagers nd developers and you want to finf max of their group then you use group by
+order by - when you want to sorted in incresing or decreasing order - while showing or displaying 
+
+JOINS
+some contents are in other table , nd some are in other table , we are supposed to join then using join function
+cross join
+outer join
+inner join 
+left outer join
+right outer join
+full outer join
+
+nested subquery vs correlated query
+nested query - query inside a query 
+where first inner query will run , then the outer query will compare all the rows of outer query with the inner query
+bottom - up approach
+here we use in , not in 
+
+correlated query
+outer query will be compared with inner rows line by line
+top - bottom approach
+here we use exists not exists
+
+pattern matching
+use LIKE keyword 
+ - %a%
+ - a%
+ - a%y etc
+
+ex: find the 2nd highest salary
+
+SELECT NAME, MAX(SALARY) AS SALARY 
+FROM EMPLOYEE
+WHERE SALARY < (SELECT MAX(SALARY)
+FROM EMPLOYEE);
+
+DIFF B/W VARCHAR ND VARCHAR2
+VARCHAR - ANSI STANDARD
+VARCHAR2 - ORACLE STANDARD
+
+TRIGGER
+LETS SAY THERE ARE 4-5 TABLES, IF I ENTER INTO ONE TABLE , IT SHOULD AUTOMATICALLY GET ENTRY INTO ALL OTHER TABLES
+SUCH AUTOMATICALLY RUNNING WHERE EVENT OCCURS IN DATABASE USING TRIGGER
+
+ACID PROPERTIES - AUTOMICITY, CONSISTENCY, ISOLATION, DURABILITY
