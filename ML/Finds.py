@@ -1,11 +1,9 @@
 dataset = [
-    ['sunny','warm','normal','strong','warm','same','yes'],
-    ['sunny','warm','high','strong','warm','same','yes'],
-    ['rainy','cold','high','strong','warm','change','no'],
-    ['sunny','warm','normal','strong','cool','change','yes']
-
+    ['sunny','warm','strong','less','strong','normal','yes'],
+     ['sunny','warm','strong','less','strong','normal','yes'],
+      ['sunny','hot','strong','less','weak','normal','no'],
+       ['sunny','warm','strong','less','strong','normal','yes'],
 ]
-
 def find_s(examples):
     hypothesis = ['0','0','0','0','0','0']
     for example in examples:
@@ -14,7 +12,7 @@ def find_s(examples):
                 if hypothesis[i]=='0':
                     hypothesis[i]=example[i]
                 elif hypothesis[i]!=example[i]:
-                    hypothesis[i]='?'
+                      hypothesis[i]='?'
 
     return hypothesis
 
