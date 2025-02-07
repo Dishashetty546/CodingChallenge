@@ -1,4 +1,4 @@
-package Dreamer.DSA;
+package Dreamer.DSA.ArrayNDstring;
 
 public class twojumpGame {
     public static void main(String[] args)

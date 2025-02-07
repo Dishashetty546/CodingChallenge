@@ -1,4 +1,4 @@
-package Dreamer.DSA;
+package Dreamer.DSA.ArrayNDstring;
 
 //given a heights of the brick 
 public class Trappingwater {
