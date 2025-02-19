@@ -1,4 +1,4 @@
-package LEETCODECHALLENGE;
+package Challenges.LEETCODECHALLENGE;
 
 //climbbing staircase
 //ex: if there are 2 steps, itt can climb by 1 nd 1 or 2  --so 2 ways

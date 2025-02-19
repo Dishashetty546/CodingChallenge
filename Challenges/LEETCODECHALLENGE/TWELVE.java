@@ -1,4 +1,4 @@
-package LEETCODECHALLENGE;
+package Challenges.LEETCODECHALLENGE;
 //Valid palindrome
 
 //" a man a plan a canal panama"

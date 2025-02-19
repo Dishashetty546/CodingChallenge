@@ -1,4 +1,4 @@
-package LEETCODECHALLENGE;
+package Challenges.LEETCODECHALLENGE;
 
 //ps: string s= aba
 //  n=10

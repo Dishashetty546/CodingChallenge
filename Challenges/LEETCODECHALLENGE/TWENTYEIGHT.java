@@ -1,4 +1,4 @@
-package LEETCODECHALLENGE;
+package Challenges.LEETCODECHALLENGE;
 //Evaluate reverse polish Notation
 
 //array of strings- tokens

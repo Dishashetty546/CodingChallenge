@@ -1,4 +1,4 @@
-package LEETCODECHALLENGE;
+package Challenges.LEETCODECHALLENGE;
 
 import java.util.Arrays;
 //GIVEN AN UNSORTED ARRAY, TASK IS TO  SORT THE ARRAY FIRST , THEN GET FIRST AND LAST ELEMENT IN AN ARRAY of a tartget value given

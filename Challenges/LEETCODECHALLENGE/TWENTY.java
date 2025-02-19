@@ -1,4 +1,4 @@
-package LEETCODECHALLENGE;
+package Challenges.LEETCODECHALLENGE;
 
 //rotate the matrix in 90 degree
 //ex: {1,2,3}

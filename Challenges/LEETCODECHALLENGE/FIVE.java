@@ -1,4 +1,4 @@
-package LEETCODECHALLENGE;
+package Challenges.LEETCODECHALLENGE;
 
 //BEST TIME TO BUY AND SELL STOCKS  //*
 public class FIVE {

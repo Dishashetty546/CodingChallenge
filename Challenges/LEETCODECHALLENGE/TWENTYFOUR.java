@@ -1,4 +1,4 @@
-package LEETCODECHALLENGE;
+package Challenges.LEETCODECHALLENGE;
 //word pattern
 
 /////////////////////////////////////////////////////////

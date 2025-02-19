@@ -1,5 +1,4 @@
-package LEETCODECHALLENGE;
-
+package Challenges.LEETCODECHALLENGE;
 // Longest palindrome substring
 
 // ex: ABRBADAADAB

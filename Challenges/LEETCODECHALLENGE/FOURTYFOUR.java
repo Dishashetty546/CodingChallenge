@@ -9,7 +9,7 @@
 // 1 2 3 4 5 6
 
 // 0/p: 1 2 3 4 5 6 2 8 4 0 6 5 4 3 2 1 5 9 3 7 8 9 0 1 7 3 9 8 7 6 0 4....
-package LEETCODECHALLENGE;
+package Challenges.LEETCODECHALLENGE;
 
 import java.util.ArrayList;
 import java.util.List;

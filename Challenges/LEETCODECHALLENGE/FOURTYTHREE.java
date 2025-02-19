@@ -23,7 +23,7 @@
 
 //o/p: 15  5
 //     16  11
-package LEETCODECHALLENGE;
+package Challenges.LEETCODECHALLENGE;
 
 public class FOURTYTHREE {
     public static void main(String[] args) {

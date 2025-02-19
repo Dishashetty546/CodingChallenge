@@ -1,4 +1,4 @@
-package LEETCODECHALLENGE;
+package Challenges.LEETCODECHALLENGE;
 //INSERT DELETE GETRANDOM --O(1)--for an array    //--
 
 //--insert an item val into set return true if item not present

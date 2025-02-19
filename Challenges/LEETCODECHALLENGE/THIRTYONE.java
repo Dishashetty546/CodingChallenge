@@ -1,4 +1,4 @@
-package LEETCODECHALLENGE;
+package Challenges.LEETCODECHALLENGE;
 //remove nth node from end of the list
 
 //remove some nde of the linkedlist

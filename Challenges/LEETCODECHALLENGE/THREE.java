@@ -1,4 +1,4 @@
-package LEETCODECHALLENGE; //--
+package Challenges.LEETCODECHALLENGE;//--
 
 import java.util.*;
 

@@ -39,10 +39,10 @@ REACT - /
 NODE JS
 
 GIT AND GITHUB -/
-OS -
+OS -/
 CN -/
-dbms
-ML
+dbms -/
+ML -/
 ------------------------------Communication skills --------------------------------------------
 
 

@@ -1,4 +1,4 @@
-package LEETCODECHALLENGE;
+package Challenges.LEETCODECHALLENGE;
 //MAXIMUM ODD BINARY NUMBER
 
 //given binary no string that contains atleast 1 rearrang bit and create highest possible odd num

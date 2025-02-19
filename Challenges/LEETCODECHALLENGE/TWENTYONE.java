@@ -1,4 +1,4 @@
-package LEETCODECHALLENGE;
+package Challenges.LEETCODECHALLENGE;
 
 //SET MATRIX ZERO
 //ex: {1,1,1}

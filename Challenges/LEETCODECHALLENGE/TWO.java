@@ -1,4 +1,4 @@
-package LEETCODECHALLENGE;//* 
+package Challenges.LEETCODECHALLENGE;//* 
 
 //REMOVE ELEMENT FROM THE ARRAY
 //approach:

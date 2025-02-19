@@ -1,5 +1,4 @@
-package LEETCODECHALLENGE;
-
+package Challenges.LEETCODECHALLENGE;
 // Linked list cycle detection
 
 // Example: head = [3,2,0,-4], pos = 1

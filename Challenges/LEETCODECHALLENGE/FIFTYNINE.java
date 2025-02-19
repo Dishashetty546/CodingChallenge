@@ -1,4 +1,4 @@
-package LEETCODECHALLENGE;
+package Challenges.LEETCODECHALLENGE;
 
 // MAXIMUM subarray sum
 // task is, given an array of elements, find a subarray out of it, whose sum is

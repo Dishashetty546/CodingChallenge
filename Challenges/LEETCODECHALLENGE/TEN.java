@@ -1,4 +1,4 @@
-package LEETCODECHALLENGE;
+package Challenges.LEETCODECHALLENGE;
 
 //length of last word(  ex: "hello world"-->5 )   //* 
 //

@@ -1,4 +1,4 @@
-package LEETCODECHALLENGE;
+package Challenges.LEETCODECHALLENGE;
 //longest common prefix
 
 //Brute force approach: check for each element in all the strings

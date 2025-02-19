@@ -1,4 +1,4 @@
-package LEETCODECHALLENGE;
+package Challenges.LEETCODECHALLENGE;
 
 //IS SUBSEQUENCE
 // s="abcde" t="aec"   => elements in s should be present in t in same sequence

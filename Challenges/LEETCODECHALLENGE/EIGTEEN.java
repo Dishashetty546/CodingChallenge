@@ -1,4 +1,4 @@
-package LEETCODECHALLENGE;
+package Challenges.LEETCODECHALLENGE;
 
 //minimum size subarray sum
 //ex: taget: 7, nums = {2,3,1,2,4,3}

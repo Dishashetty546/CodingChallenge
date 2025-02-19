@@ -1,4 +1,4 @@
-package LEETCODECHALLENGE;
+package Challenges.LEETCODECHALLENGE;
 //valid anagram
 
 //both the strings shud have same number of values nd alphabets of string 1 = alphbets of string 2

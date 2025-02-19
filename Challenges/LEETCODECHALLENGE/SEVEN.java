@@ -1,4 +1,4 @@
-package LEETCODECHALLENGE;
+package Challenges.LEETCODECHALLENGE;
 //product of elements in an array except the self //* 
 
 //aproach 1: dividing each elemet by itself
