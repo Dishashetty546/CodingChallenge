@@ -372,6 +372,8 @@ it can direactly read design file, but can extend projcet File
 17. super keyword : refer to immeediate parent class object
 18. method overloading in java - creating multiple signatures using one method name , to varying return type  or varying num of arguments
 19. overload a static method - no, it might throw error as static method cannot be refernced
+20. JDK - JRE - JVM
+21. JDK -  java development kit is a software development kit for software develpment lit that proides tools and required tp develop
 
 
 

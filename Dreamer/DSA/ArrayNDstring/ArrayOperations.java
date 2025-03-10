@@ -1,4 +1,7 @@
 package Dreamer.DSA.ArrayNDstring;
+//operations to create are insert, remove and get random value 
+
+//show operations in the form of boolean
 
 import java.util.List;
 import java.util.ArrayList;
@@ -48,8 +51,8 @@ public class ArrayOperations {
     public static void main(String[] args) {
         ArrayOperations obj = new ArrayOperations();
         System.out.println(obj.insert(1)); // Output: true
-        System.out.println(obj.insert(2)); // Output: true
-        System.out.println(obj.remove(1)); // Output: true
+        System.out.println(obj.insert(1)); // Output: true
+        System.out.println(obj.remove(2)); // Output: true
         System.out.println(obj.getRandom()); // Output: Random element from {2}
     }
 }
