@@ -12,7 +12,7 @@ rules to set or build an application:
 rfc- request for comments
 internet soceity will set all these rules
 
-eq; google.co m --->request set to googe
+eq; google.com --->request set to googe
                               <---response is sent
 
 protocols:rules and regulations framed by internert soceity they are known as protocol
@@ -363,7 +363,9 @@ UTP CABEL - 100 OHM
 
 15.  HTTP
 16. NAT - network address translation - 
-
+17. OSI- open system interconnection - this is an  refernece model which defines how applications can communicate with each other over a networking system
+ seven layers
+ 1.application layer- closest to end users, this layer interacts with s/w
 
 
 

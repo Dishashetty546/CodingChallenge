@@ -59,23 +59,47 @@ int count_unigram(char words[][MAX_WORD_LENGTH], int count, char w1[])
     return unigram_count;
 }
 
-// Calculate bigram probability
-double bigram_probability(char words[][MAX_WORD_LENGTH], int count, char w1[], char w2[])
+// Count unique words in vocabulary
+int count_unique_words(char words[][MAX_WORD_LENGTH], int count)
+{
+    int unique = 0;
+    int found;
+
+    for (int i = 0; i < count; i++)
+    {
+        found = 0;
+        for (int j = 0; j < i; j++)
+        {
+            if (strcmp(words[i], words[j]) == 0)
+            {
+                found = 1;
+                break;
+            }
+        }
+        if (!found)
+        {
+            unique++;
+        }
+    }
+    return unique;
+}
+
+// Calculate smoothed bigram probability
+double bigram_probability(char words[][MAX_WORD_LENGTH], int count, char w1[], char w2[], int vocab_size)
 {
     int bigram_count = count_bigram(words, count, w1, w2);
     int unigram_count = count_unigram(words, count, w1);
-    if (unigram_count == 0)
-        return 0.0;
-    return (double)bigram_count / unigram_count;
+
+    return (double)(bigram_count + 1) / (unigram_count + vocab_size);
 }
 
-// Compute final sentence probability
-double compute_final_probability(char train_words[][MAX_WORD_LENGTH], int train_count, char test_words[][MAX_WORD_LENGTH], int test_count)
+// Compute final sentence probability with smoothing
+double compute_final_probability(char train_words[][MAX_WORD_LENGTH], int train_count, char test_words[][MAX_WORD_LENGTH], int test_count, int vocab_size)
 {
     double probability = 1.0;
     for (int i = 0; i < test_count - 1; i++)
     {
-        double prob = bigram_probability(train_words, train_count, test_words[i], test_words[i + 1]);
+        double prob = bigram_probability(train_words, train_count, test_words[i], test_words[i + 1], vocab_size);
         probability *= prob;
     }
     return probability;
@@ -92,15 +116,17 @@ int main()
     int train_count = tokenize(training_corpus, train_words);
     int test_count = tokenize(test_sentence, test_words);
 
-    printf("Bigram probabilities:\n");
+    int vocab_size = count_unique_words(train_words, train_count);
+
+    printf("Smoothed Bigram Probabilities:\n");
     for (int i = 0; i < test_count - 1; i++)
     {
-        double prob = bigram_probability(train_words, train_count, test_words[i], test_words[i + 1]);
+        double prob = bigram_probability(train_words, train_count, test_words[i], test_words[i + 1], vocab_size);
         printf("P(%s|%s) = %.3lf\n", test_words[i + 1], test_words[i], prob);
     }
 
-    double final_prob = compute_final_probability(train_words, train_count, test_words, test_count);
-    printf("\nFinal probability of test sentence: %.6lf\n", final_prob);
+    double final_prob = compute_final_probability(train_words, train_count, test_words, test_count, vocab_size);
+    printf("\nFinal probability of test sentence: %.10lf\n", final_prob);
 
     return 0;
 }

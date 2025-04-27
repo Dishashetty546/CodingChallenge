@@ -11,3 +11,4 @@ SOLVED 5 QUESTIONS EACH ON PREV YEAR QUESTIONS
 
 7. Time and work
 8. LCM AND HCF
+9. Profit and loss
