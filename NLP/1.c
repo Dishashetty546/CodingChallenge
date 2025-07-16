@@ -18,7 +18,7 @@ int tokenize(char sentence[], char words[][MAX_WORD_LENGTH])
         }
         else
         {
-            words[count][j] = '\0'; // End current word
+            words[count][j] = '\0';
             count++;
             j = 0;
             if (sentence[i] == '\0')

@@ -1,0 +1,102 @@
+MongoDB?
+
+user --> requests client side(react js) --> server side(node js) API ---> database(mondosb)
+
+mongoDB is a NOSQL database , it is not RDBMS
+
+database types
+RDBMS - mysql,oracle,sql server
+NOSQL - mongodb,dynamoDB
+-------------------------------------------------------------------------------------------------------------------------------------------
+ RDBMS VS NOSQL?
+
+ RDBMS 
+ -structured data
+ -predefined rows and columns
+-Schema is defined
+
+NOSQL
+-unstructured,sem-structured data
+-data in JSON - java scrip object notation
+------------------------------------------------------------------------------------------------------------------------------------------
+when to use RDBMS or NOSQL?
+RDBMS - structured data, data exchange is slow.
+ex: Banking application, finance
+
+NOSQL - unstructured data, large application , high speed data read write tansfer exchange used in social media and gaming
+---------------------------------------------------------------------------------------------------------------------------------------------
+Documents nd collections in NOSQL?
+
+Documents - semi structured data which are stored in the form  of json, it is similar to rows and columns in RDBMS
+Collection - group of documents that are stored together in a  NOSQL database, simeiler to tables in RDBMS
+{
+    "ID":1,
+    "name":"disha",
+    "password":"779uh"
+
+}
+-------------------------------------------------------------------------------------------------------------------------------------------
+CRUD operations in MONGODB?
+c- craeet - insert a document
+R - read - retrive a data
+u - updade
+D - delete
+-----------------------------------------------------------------------------------------------------------------------------------------
+connect MONGODB TO node js?
+
+1. install mongodb  - npm install mongodb
+2. mongo.js  
+const {MongoClient} = require("mongodb")
+3. go to mongodb atlas, its a cloud platform, login, then create a new project - give project name, add team collaboration access with mail,
+then click on create project, create a free cluster, then take down username and password, then creatr cluster, take url string
+paste it here 
+const url= " ";
+4. create a new mongodb client
+const client= new MongoClient(url)
+
+async function connectToMongoDB(){
+    try{
+        await client.connect();
+        console.log("connected");
+        return client.db();
+    }
+    catch(error)
+    {
+        throw error;
+    }
+}
+module.exports= connectToMongoDB;
+
+-------------------------------------------------------------------------------------------------------------------------------
+Schema in mongoose?
+defining the structure of a collection
+const mongoose= require("mongoose")
+const userSchema= new mongoose.Schema({
+    name:{
+        type:String,
+        required:true,
+        minlength:3
+    },
+    email:{
+        type:String,
+        required:true,
+
+    },
+    age:{
+        type:string,
+        required:true,
+    },
+    
+})
+const user = mongoose.model("User",userSchema);
+module.exports= User;
+
+schema defines the structure, validation rules, ensures data integrity
+------------------------------------------------------------------------------------------------------------------------------------------
+What is mongoose? wht is its advantage?
+its a mediator - its gives schema based solution to model application data - model is object data modelling(ODM)
+to validate invalid data - data validation
+middlewear support 
+relationship bw collections
+
+---------------------------------------------------------------------------------------------------------------------------------------------

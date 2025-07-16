@@ -1,0 +1,691 @@
+==================================================MODULE=======================================================================
+
+what is javascript and where is it used
+high level programming lang widely used to create interactive web application wihin the web browsers - human understandable programming
+used for web and mobile applications.
+---------------------------------------------------------------------------------------------------------------------------------
+Template Litarals in js?
+its a usage {}, $ symbols and characters
+
+ex: 
+if let a=10 and let b=20
+if we want to print them
+console.log(a,b, "is added to get output,a+b)
+this code might work, but this isnt user frendly and clear
+
+so we use
+console.log(`sum of ${a} and ${b} is ${a+b}`)
+
+then are used to embed varaibles and expressions to get in a string form , to make the code more readable and flexible
+
+this is termed as template Litarals
+-----------------------------------------------------------------------------------------------------------------------------------------------
+what is hosting in js>
+One of the weird nature of js
+
+ex:
+function greet(){
+    console.log("Hello")
+}
+
+before even declaring a function, it will not through error, but output will be "hello"
+in other pl it will throw errors
+
+this nature of js is termed as hoisting
+where variable or functyion declarations are moved to the top of their scope before tehir execution
+
+Types
+Variable hoisting
+console.log(a)
+var a= 10;
+
+mainily for var variables
+--> o/p: undefined
+
+console.log(a)
+console.log(b)
+let a=10;
+const b=10
+-->o/p: reference error
+------------------------------------------------------------------------------------------------------------------------------
+diff b/w let , var and const?
+let and const - are block scope --> ex: they are only excessable for certain block, only inside a for,while,if loop where they are declared
+var - global score --> accessed outside of the , inside a function , access inside
+
+ex: if(false)
+{
+    let a=10;
+    const b=20;
+    var c= 30;
+    console.log(a)
+    console.log(b)
+    console.log(c)
+}
+
+console.log(c); //c
+
+being a global scope, var is least preffered out of all. coz it can lead to complications
+const - prioratized, due to ability to prevent data leakage
+
+---------------------------------------------------------------------------------------------------------------------------
+datatypes in js?
+
+premitive and non premitive
+primitive - which cant be modified - not mutable
+Non-Primitive - which can be modified - mutable
+
+primitive
+Number - integer and floating point , also include NAN - not a number, Infinity, let a=10, const a=30, var a=50
+string - represent a sequence of characters or a text, it can be created by single quotation or double quotation '',"", let a="ghgh"
+Boolean - logical entity - true or false
+undefined - default value
+Null - declared which is not declared yet  or doesnt have anything
+Symbols - a unique or immutable identifiers
+BigInt - avery large integers that exceed the limit of the number data types, it is crrated by appending n at the end of the integer
+ex: let bigNumbers = 121325647776798789n
+
+Non-premitive 
+Objects - collection of key value pairs , they contain objects, functions and data types
+let person = {
+    name: "John",
+    age:30,
+    isStudent: false
+}
+
+Arrays - list like structure, which store mulltiple valuee sin an orderd fashion, Array in JS are zero-indexed
+let fruits=["apple","banana","cherry"]
+
+function - block of reusaable code, whuch are treated as an objects can be assigned with variables, passed with arguments and returned from other functions
+functionn greet(name){
+    return `hello ${name}`;
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------
+what is an array in js?
+ordered collection of data, value can be of any datatypes
+but collection of data should be of same datatypes
+
+syntax
+array Litarals
+let fruits= ["apple","banana","cherry"]
+
+array constructor
+let num= new Array(19,20,30)
+
+access by its indexe
+console.log(fruits[0])
+console.log(fruits[1])
+console.log(fruits[2])
+
+we can use for loop, for for each loop
+
+for(let i=0;i<fruit.length;i++)
+{
+    console.log(fruits[i]);
+}
+
+-------------------------------------------------------------------------------------------------------------------------
+diff bw == and === operators?
+
+== is equality operators
+=== is strict equal operators
+
+ex: 
+conole.log(5=="5");
+it has ability to do type conversion from string to nummber 5
+// output: true
+
+console.log(5==="5")
+doesnt do type conersion
+// output: false
+------------------------------------------------------------------------------------------------------------------------
+NAN in js?
+
+console.log(typeof NAN) is a number
+console.log(isNaN("hello")) is hello string can be converted to a number
+console.log(isNaN(undefined)) is underfined
+
+console.log(isNaN('123'))
+it can be converted into number, but its a wrong o/pairs
+--------------------------------------------------------------------------------------------------------------------
+what is null nd undefined?
+both declares absence of an value
+undefined - varible declare but not initialized yet
+let a;
+console.log(a);
+
+null - variable is declared as null
+intential absence of vallue let a= null
+--------------------------------------------------------------------------------------------------------------------------------------------------
+use of typeof?
+determines datatype of variable
+-------------------------------------------------------------------------------------------------------------------------------------
+=========================================================MODULE 2===============================================================================
+
+purpose of MAP method in js? 'lets say there is an array you want to print ot create it can be done by MAP
+its to create a new array by applying specified  dunc to each elements in an existing array.
+---------------------------------------------------------------------------------------------------------------------
+bubling and capturing even?
+Event handling
+bubling - where the CEO comes first -> manager -> employees (inside to outside)
+Capturing - where employee comes first -> manager -> CEO  (Outside  to inside)
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+High order function?
+a function which can take a function as an argument and returns the function as an argument.
+
+const num=[1,2,3,4,5]
+cosnt double= numbers.map(function(num)
+{
+    return num*2;
+})
+
+-------------------------------------------------------------------------------------------------------------------------------------
+IIFE in js - immediately involked function 
+'ex: 
+
+regular function - where we call the function
+function greet(){
+    console.log("hello")
+}
+
+greet();
+
+IIFA
+(function(){
+    console.log("Hello");
+}),();
+without being called
+
+------------------------------------------------------------------------------------------------------------------------------
+Closures in JS?
+function of(){
+    let ov= "hello";
+    function if(){
+        console.lof(ov);
+
+    }
+    return if;
+}
+
+to declare private varaibles inside an object we need Closures
+
+ex:
+function of(){
+    let c=1;
+    function increment(){
+        c++;
+        console.log(c++);
+    }
+
+    function decrement(){
+        ++c;
+        console.log(++c);
+    }
+}const mycount= of()
+console.log(mycount.increment());
+
+----------------------------------------------------------------------------------------------------------------------------------
+setTimeout and setInterval in js?
+used to schedule the tasks to eun after a specific amount of setTimeout
+used in web API, used to delays or repeated
+
+setTimeout() - used to execute a function after a speceified delays
+ex: in our phones, after certail interval of time, we will receive notificatios
+setInterval() - used to execute a function repeatedly at a specified intervals
+
+setTimweout(()=>{
+    console.log("Hello world")
+},2000);  after 2 sec, hello world will print
+
+SetInterval - it will print after each interval
+setInterval=(()=>{
+    console.log("Hello after every 2 secs");
+},2000);
+--------------------------------------------------------------------------------------------------------------------------------
+Promises in JS?
+handle asynchronous tasks in js providing a readable and structured apparoach then callabacks for handling outputs
+
+Types 
+
+Pending
+FullFilled
+Rejected
+
+let data={
+    name:"name"
+    class:"A"
+}
+function fetchData(){
+    return new Promise((resolve,reject)=>{
+        setTimeoi=ut(()=>{
+            resolve(data);
+        },2000)
+    })
+}
+fetch.then{
+    data=>{
+        console.log("Data",data);
+    }
+    catch(err=>{
+        console.log("Error:",err);
+    })
+}
+
+--------------------------------------------------------------------------------------------------------------------------------
+use of asyn and await in JS?
+ASYNC - declaring a func with async will make it return Promise
+AWAIT - It pauses execution of the code until the promise its waiting is resolved the return the resolved value
+
+async function fetchData(){
+    try{
+        //we are waiting until it fetch
+        const response = await fetcj("API");
+        //after waiting, we send the respnse in json form
+        const data = await response.json();
+    }
+    catch(err)
+    {
+        console.log(err)
+    }
+}
+fetchData();
+------------------------------------------------------------------------------------------------------
+call,apply, bind?
+function cook(){
+    console.log(`$(name) is having meal with ${nam1}`)
+}
+invokes a function immediately and will set an argument and accepts arguments one by one - call
+invokes a function immediately and will set an argument and takes arguments as an array - apply
+returns a new function with this set to thisArh and any present arguments but doesnt invoke it immediately - bind
+-----------------------------------------------------------------------------------------------------------------
+Even delegation?
+its basically related to bubbled and category events
+it improves performance, handles dynamic elements
+cleaner code
+
+---------------------------------------------------------------------------------------------------------------------
+event loop in js?
+ex; by the time we are boiling an egg, we can chop the veggies
+
+add vegetables
+make pasta
+chop the vegetables   <- a pointer which monitors all this is assistant
+boil water
+
+----------------------------------------------------------------------------------------------------------------
+diff bw async and promise in js?
+ex: lets consider async/await a big box
+promise - is a small box
+
+await we can pause the execution util the promise resolves
+promise are bilting blocks for async/await works on top of it,but promise themselves dont enclose async and await
+----------------------------------------------------------------------------------------------------------------
+reduce method in arrays?
+reduce an array by add, mutiply the elemets in an array
+const numbers= [1,2,3,4,5]
+const sum= numbers.reduce((accumulator,currentval)=>{
+    return accumulator+currentval;
+},0);
+console.log(sum);
+
+its used coz
+consise
+versatitle
+function programming
+--------------------------------------------------------------------------------------------------------------------
+currying in js?
+its a function wherein part of it stays constant-static and othet part will be dynamic
+
+function double(a)
+{
+    return function(b)
+    {
+        return a+b;
+    }
+}
+const add2= double(2)
+console.log(double2(3));
+
+ex: if we are suposed to create a 15 ppt regarding 15 animals, then we create 1 and keep it constant, as a templet for all 14 other
+this increases performance and can complete tasts in less time
+------------------------------------------------------------------------------------------------------------------------
+Generator function?
+while using while loop - we go into infinite loop
+and if program is big and system can crash
+
+to prevent this we use generator function
+function* infinite{
+    let n=1;
+    while(true)
+    {
+        yeild n;
+        n++;
+    
+    }
+}
+
+const s= infinite();
+console.log(s.next().value)
+console.log(s.next().value)
+
+even though there is while loop, it;ll print only when we want to
+----------------------------------------------------------------------------------------------------------------------
+memory managemeny in js?
+
+numbers
+strings                       objects
+booleans                      Arrays
+null                          Functions
+underfined
+
+stack memory                 Heap memory(permanent memry)
+
+
+
+ there is also a garbage collection
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+Observer pattern?
+pattern in which an object maintains a list of its dependents and notifies them of any changes typically a broadcast mechanism
+-----------------------------------------------------------------------------------------------------------------------------------------------
+what is javascript?
+Accorsing to study, javascript is most used lanaguage, even in git, js is more used lanaguafe
+Every developer will have js in their resume
+ 
+the browsser we use chrome,firefox we use are made of js 
+they usr html,css,js which will create a static page
+
+every search engines use javascrip engines like V8 of chrome ,spider monkey of firefox , js core , chakra
+
+is a pl that is used to convert static web page to interactive web page
+-----------------------------------------------------------------------------------------------------------------------------------------
+datatype of js?
+type of variable that can be stores
+
+primitive nd non premitive datatypes
+
+primitive datatypes value once assignes which is not changed, they are immutable, can hold only single value
+ex: let age=25
+
+after some iterations , if we assisgn let age=35
+then 
+age  25 35
+35 is assigned in differnt location  not changed
+-----------------------------------------------------------------------------------------------------------------------------------
+primitive vs non primitive datatypes?
+primitive - Number string boolean undefined null symbols
+non primitive - objects arrays functions data regexp
+
+primitive
+single value holding capacity
+its a immuntable nature, its cant be changed
+simple datatypes
+
+non-primitive
+hold multiple values
+its mutable nature
+complex datatypes
+------------------------------------------------------------------------------------------------------------------------
+arrays , function and objects  in js?
+
+arrays - list/ collection of data, it can store any datatypes, but collection we store should be of same datatype
+let a=["dof,"cat"]
+console.log(a[1])
+console.log(a.length())
+console.push("dog")
+
+Functions - its a block of code which performs a specific tasks or returns a value, its a reusaable part of code
+function code(a,b)
+{
+    return a+b;
+}
+console.log(add(2,4));
+
+object - non primitive datatype, whcihs can hold multiple values or combination of values
+
+---------------------------------------------------------------------------------------------------------------------------
+scope in js?
+Local  scope 
+Global scope
+----------------------------------------------------------------------------------------------------------------------------
+what is loop ? types?
+  a programming way to run set of program repeatesdly until condition is statisfies
+
+  types - for, while, do while loop
+
+for - allow to iterate through a block of code for a specific set of time
+for (int i=0;i<5;i++)
+{
+    console.log(i);
+}
+
+while - execute a block of code while a certailn condition is true
+while(j<5)
+{
+    console.log(j);
+    j++;
+}
+
+do while - similar to while loop , the block od code executes atleast once even if the condition is false
+do{
+    console.log(k);
+    k++; 
+} while(k>1)
+------------------------------------------------------------------------------------------------------------------------------------
+for..of and for..in loop?
+
+for..of loop
+let arr= [1,2,3]
+for(let val of arr)
+{
+    console.log(val);
+}
+
+for..in loop
+const person{
+    name:'disha',
+    age:20,
+    role:'developer'
+};
+for(int key in person)
+{
+    console.log(person[key]);
+    
+}
+
+for..in will iterate through the properties of an object
+it iterates over the key of an object and acces the value associated with those
+
+for..of loop through the vlaue of the object in arrays or strings
+value accessed directly by its values
+
+---------------------------------------------------------------------------------------------------------------------------------------
+for each method? compare with for..of and for...in loop?
+
+In array 
+const a = [1,2,3,4]
+a.forEach(function(item){
+    console.log(item);
+})
+
+for each is a moethod avaiable on arrays or objects that allow you to iterate over each element of the array and perform some action for each elememt
+----------------------------------------------------------------------------------------------------------------------------------------
+types od functions in js?
+
+there are 7 types of functions
+-named func
+-anonymous func
+-function expressions
+-arrow function
+-IIFE
+-callaback
+-high order
+
+---------------------------------------------------------------------------------------------------------------------
+named function?
+
+ex:
+function sum(a,b)
+{
+    return a+b;
+}
+console.log(add(5,3));
+
+calling a function directly inside the console is termed as named function.
+------------------------------------------------------------------------------------------------------------------------
+Anonymous function?
+funcions with  no name
+
+console.log(function(a,b)
+{
+    return a+b;
+
+}(4,5));
+-----------------------------------------------------------------------------------------------------------------------------------
+function expression ?
+assigning a function into a variable
+const add = function(a,b){
+    return a+b;
+};
+console.log(add(5,3));
+------------------------------------------------------------------------------------------------------------------------------------------
+arrow function?
+are a concise syntax for defining function in js.
+const add = (x,y)=> x+y
+console.log(add(5,3));
+------------------------------------------------------------------------------------------------------------------------------------------
+callback function?
+that is passed as an argument in another function
+
+ex:
+function add(x,y){
+    return x+y;
+}
+let a=3, b=5;
+let result= add(a,b);
+console.log(result);
+
+display(10,5,add);   <-- here add is a callback function
+
+if we have mutiple operations , this will make clear, visually good, clear code form, that is why callback function is used
+-----------------------------------------------------------------------------------------------------------------------------------------
+callback function use cases?
+
+iterations
+event handling
+asynchronous operation
+high order functions
+Promises
+---------------------------------------------------------------------------------------------------------------------------------------
+callbacks in iterations?
+const numbers= [1,2,3,4];
+function logNumber(num)
+{
+    console.log(num);
+}
+num.forEach(logNumber);
+-------------------------------------------------------------------------------------------------------------------------------------------
+Even handling in js?
+respond to user actions in a web page
+addEventListner of js allows to attacg an event name with the function you want to perform on that event
+----------------------------------------------------------------------------------------------------------------------------------------
+high order function?
+take one or more functions as arguments(callback function)
+return a func as result
+---------------------------------------------------------------------------------------------------------------------------------------------
+Asynchronous operations?
+an operation which does not block the exicution of the code
+setTimeout is a asynchronous function which executes callback function after a specific period of setTimeoi
+
+uses 
+setTimeout
+Promises
+uploading files
+-----------------------------------------------------------------------------------------------------------------------------------------
+promises in JS?
+way to handle asynchronous operations
+it represents a value that may not be available yet but will be availabe at some point of time
+
+3 states 
+-Pending
+-resolved
+-reject
+
+const promise = new promise((resolve,reject)=>{
+    //performs asynchronouds operations
+    //if successful then call resolve(value)
+    //if failed,call reject(error)
+
+})
+
+--------------------------------------------------------------------------------------------------------------------------------------
+promise implementaion?
+const promisee= new promise((resolve,reject)=>{
+    setTimeout(()=>{
+        const response= Math.min(0,2);
+        if(response==2)
+        {
+            resolve(`success ! ${response});
+        }
+        elemets{
+            reject(`error : ${respnse});
+        }
+
+    },2000)
+})
+
+
+//using .then() method to handle the resolved promise
+promisee.then((result)=>{
+    console.log(result);
+})
+.catch((error)=>{
+    console.log(error);
+})
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+Promises?
+
+they are used to hadle asynchronous operations in js
+they represent a value that may not be availabel yet but will be avaible at some point in future
+they have 3 states - pending, resolve,reject
+
+usage
+API callbacks
+DATA FETCHING
+EVENT handling
+--------------------------------------------------------------------------------------------------------------------------------------
+Classes and objects in js?
+js is object oriendted programming lanaguage
+class is a template to create objects with similar properties and methods
+
+ex:
+
+class car{
+    static numofwheels=4;
+
+    constructor(model,year)
+    {
+        this.model= model;
+        this.year= year;
+    }
+    start()
+    {
+        console.log(`$(this.model))
+    }
+}
+
+this  keywoed is a scope of the object
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+Hoisting in js?
+
+myfunction()
+
+function myfunction(){
+    console.log("gjjh")
+}
+
+even though we called the function  before declaring them, this will get exicuted and give outputs
+becuase js has ability to rearrange the structure, it wil move the counter

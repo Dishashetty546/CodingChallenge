@@ -1,0 +1,79 @@
+REST API?
+
+user ----> send request -----> client side(react)--->backend(server side - REST API)(node js+express) ----> database server
+user<-----response(HTML)<-----client side<----------response(json) API<------------------------------------------database
+
+REST - representational state transfer is an architectural style for debugging n.w application
+RESTful api is a server that follow set of REST principles or guildlines
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+REST API VS SOAP API?
+
+REST API - representational state transfer 
+architecture style
+uses HTTP OR HTTPS
+use lightweight formats json,xml
+relies on http status code
+lightweight and faster
+
+SOAP API - simple object access protocol
+various protocols- http,https..smtp etc 
+stateless
+desfines its own fault
+can be slower
+uses only xml
+-------------------------------------------------------------------------------------------------------------------------------------
+HTTP verbs and HTTP methods?
+user ---> send request to cleint ----> client side /frontend ---> HTTP verbs/methods --->API/BACKEND ----> database server
+
+HTTP methods/Verbs 
+get - retriive all the data from a specific resourcse, request body is empty, headers are optional
+post -submit the data to be processed, that is sent through the request body
+put - update a resource or create a new resource if it doesnt exists
+patch 
+delete- request removal of a rousouce
+--------------------------------------------------------------------------------------------------------------------------------------
+Diff bw put and patch?
+both used to update a resource with a new data
+put request only entire feild of a body
+Full update
+ex:
+{
+    "id":123,
+    "name":"john",
+    "email":"dishashetty546@gmail.com",
+    "age":34
+}
+
+patch request only a part which need to updated is passed in the reqest body 
+Partial update
+ex:
+{
+    "email":"gjhh",
+    "password":"yui"
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+idempotence in RESTFUL API?
+
+get : www.abc.com/userSchema
+if we send this req 100 times
+will return the same response/result/output
+
+Non-idempotent in RESTFUL API?
+post : www.abc.com/userSchema
+will have diff response every time
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+Status codess in RESTFUL API?
+
+to convey the results in client requests
+1xx(info)
+2xx(success)
+3xx(Redirection)
+4xx(client error)
+5xx(server Error)
+
+
+
