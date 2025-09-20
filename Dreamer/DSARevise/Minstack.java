@@ -4,7 +4,7 @@ import java.util.Stack;
 //minstack
 
 //design a stack that supports push,pop,peek and retreiving minimum element 
-//pop(),push(),pop(),top(),getMin() in O(1) time complexity
+//pop(),push(),pop(),top(),getMin() in O(1) ti me complexity
 
 //approach:
 

@@ -32,15 +32,15 @@ public class LongestSubstringWithoutRepeatition {
     }
 
     public static int LongestSub(String str) {
-        Set<Character> cs = new HashSet<>();
+        Set<Character> set = new HashSet<>();
         int maxlen = 0;
         int l = 0;
         for (int r = 0; r < str.length(); r++) {
-            while (cs.contains(str.charAt(r))) {
-                cs.remove(str.charAt(r));
+            if (set.contains(str.charAt(r))) {
+                set.remove(str.charAt(r));
                 l++;
             }
-            cs.add(str.charAt(r));
+            set.add(str.charAt(r));
             maxlen = Math.max(maxlen, r - l + 1);
 
         }

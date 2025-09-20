@@ -1,0 +1,8 @@
+datatypes in java 
+
+byte - 1 byte -> 8bits
+int - 4 bytes - > 8*4
+long ->
+short ->
+char ->
+

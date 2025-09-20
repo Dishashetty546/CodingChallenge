@@ -69,11 +69,58 @@ will have diff response every time
 Status codess in RESTFUL API?
 
 to convey the results in client requests
-1xx(info)
+1xx(info) 
+-100 continue
+
 2xx(success)
+-200 ok
+-201 created
+-202 accepted
+-204 no content
+
 3xx(Redirection)
+-300 multiple choice
+
 4xx(client error)
+-400 bad requests
+-401 unauthorized
+-403 forbidden
+-404 not found
+
 5xx(server Error)
+-500 internal server error
+-501 not implemented
+-502 bad gateway
+-503 service unavailable
+------------------------------------------------------------------------------------------------------------------------------------------
+What is CORS in RESTFUL API?
+CORS - cross origin resource sharing
+http://intervirwhappy/index.html 
 
+security feature  implemented in web browser that restricts web pages or scripts from making requests t a different domains that the one that served the web pages
 
+-------------------------------------------------------------------------------------------------------------------------------------------
+Versionaing in RESTFUL api's?
+ex: if we are changing the versions of API ,version 1, version 2, version 3
+but clients are not ready to accept this because of shortage of resources or they are not yet upadated
 
+there comes a picture of Versionaing
+practice of mainitaining multiple versions of the API to support backward compatibility
+---------------------------------------------------------------------------------------------------------------------------------------------
+Token based or JWT authentication In js?
+most popular type of authentication used
+JWT - json web Token - which generates tokens
+
+frontend/client-side----------post(username,password)---> nodeJS(REST API) Authentication and create JWT token 
+
+   client <------------------return the response(JWT token)-------------------- server
+
+   client------------------request data(JWT token;header)----------------------> Server  (validates the token signature)
+
+   client <--------------------send data-------------------------------------- server
+(display data in browser)
+-------------------------------------------------------------------------------------------------------------------------------------------
+JWT?
+they are used with security constarints bw client and the server they are often used for authenticarina nd authorization scenerios
+jwt is a string consisting of 3 major parts
+---------------------------------------------------------------------------------------------------------------------------------------------------

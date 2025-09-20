@@ -1,0 +1,145 @@
+Role of react?
+
+user ----request---->client---get/post--->API/server------>Database Server
+
+User <---response----Client<--------------API/server<------Database/Server
+
+here react is used in frontend instead of CSS/HTML/js
+which is mixture of xml+js ==> jsx
+React/Angular framework - because of its component based architecture
+
+its a open source js library
+react is used for building user interface
+react simplies the cretion of web page by its reusable components
+
+SPA(single page application)
+used for single page application
+ex: 
+youtube UI 
+if we try to reload the page, page will be same its a single page, just the content inside them will get reloaded
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+Advantages?
+Its a most popular UI technologies
+React is cross platform and open source free to use\
+Lighweight and very fast(Virtual DOM)
+large community and ecosystem
+Large Community and ecosystem
+Testing is easy
+----------------------------------------------------------------------------------------------------------------------------------------------
+Disadvantages?
+if we have static website, small and simple its not preffered
+---------------------------------------------------------------------------------------------------------------------------------------------
+diff bw angular and react?
+-React
+is a js library
+uses a virtual DOM which makes it faster
+its smaller in size and lightweight and faster sometime
+it depends on the external libraries for more complex development
+easy to learn
+
+-Angular 
+its complex framework
+uses DOM
+bigger hence complete framwork 
+since its a complete framework biuit in support
+Slightly difficlut to learn
+--------------------------------------------------------------------------------------------------------------------------------------
+DOM?
+
+document object model, represents a web page as a tree like structure which allows js to dynamically access and manipulate the content and
+access the structure of web page
+----------------------------------------------------------------------------------------------------------------------------------------------
+diff bw virtual dom and read dom?
+
+virtual dom is creating a exact copy of real dom ,in bw user and real dom 
+now whatever changes user makes will entirely made on virtual dom
+this will increase productivity
+----------------------------------------------------------------------------------------------------------------------------------------
+component in react?
+a web page is divided into multiple blocks, these blocks are coding in a component based architecture which can be resused
+--------------------------------------------------------------------------------------------------------------------------------------------
+setup react in js?
+
+1. install node js becaus its a run time environment
+2.download visual studio
+3.open vs code , in terminal run npx create-react-app folder_name
+4.cd folder_name
+5. npm run dev - starting web app
+---------------------------------------------------------------------------------------------------------------------------------------
+node_modules?
+npm - node package manager
+dependenices which are necessaru to run or use react app,react libraries
+-----------------------------------------------------------------------------------------------------------------------------------------------
+public folder?
+static assets - image,fonts, and index.html
+-------------------------------------------------------------------------------------------------------------------------------------------
+src?
+all the source code used to make web page dynamically
+---------------------------------------------------------------------------------------------------------------------------------------------
+index.html in react app?
+whenver client requests through http, the first page loaded or send will be index.html this is that single page
+----------------------------------------------------------------------------------------------------------------------------------------------
+app.js?
+consisderd as root components which is default responsieble for rendering all othet components
+--------------------------------------------------------------------------------------------------------------------------------------------
+function and return in react?
+function is js function which will return react element,returns a react elements
+--------------------------------------------------------------------------------------------------------------------------------------------
+import and export ?
+as react is library we need to use other libraries for functionalities so we import some of it
+export is not given throws export 'default'
+----------------------------------------------------------------------------------------------------------------------------------------------
+ReactDOM?
+it is a js library
+which converts components to a actual browser DOM
+
+index.js?
+renders all the components and replace the root element of index.html file with newly created rendered root elements
+--------------------------------------------------------------------------------------------------------------------------------------------
+How react app load ?
+
+user ---request ---> index.html-------> index.js in which we have app.js file
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+JSX- javascript XML - which is mixture of both js and xml 
+advantage? why not just js?
+
+improve code readability
+type saftely
+supports js expressions
+improved performance
+-------------------------------------------------------------------------------------------------------------------------------------------
+how does browser understand jsx file? what is babel
+
+no jsx will not be uderstood by browser
+browser only understands JS code
+so this jsx code is converted into js using babel
+BABEL - used to transile JSX to regular js which browser can understand
+----------------------------------------------------------------------------------------------------------------------------------------------
+Transpiler?
+tool that converts one programmning lang to another
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+fragment in react?
+way to group the list of childerns without adding extra nodes to DOM 
+EX: <></>  or <Fragment></Fragment>
+---------------------------------------------------------------------------------------------------------------------------------------------
+how to iterate over a list in jsx what is map() method?
+map() method is to iterate an array and modify its elements using a callback function
+
+numbers.map((numbers)=> (numbers*2))
+---------------------------------------------------------------------------------------------------------------------------------------------
+props in jsx?
+way to pass data from parent component to child components
+------------------------------------------------------------------------------------------------------------------------------------------------
+conditional rendering?
+
+if/else 
+ternary operator
+&& operator
+switch statements
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+

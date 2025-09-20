@@ -1,0 +1,54 @@
+OOP
+stands for object oriented programming
+that organizes software design around the concept of objects, classes rather then functions or logic
+---------------------------------------------------------------------------------------------------------------------------------
+importance of oop:
+-modularity - small as possible
+-reusable code- reduces with inheritance
+-Data security- protects data using encapsulation
+-Scalability- easily scale small to large systems
+-Easier maintaince
+-----------------------------------------------------------------------------------------------------------------------------------------
+OOP
+class - dogs
+Objects - bread, name,age, color
+
+class 
+blueprint/template to create objects, it defines the properties  and methods
+
+objects
+they are real world entities, it can be living or non-living
+they have attributes and methods
+--------------------------------------------------------------------------------------------------------------------------------
+Four pillers of OOPS
+-encapsulation
+bundles data and methods
+protecting internal state
+
+-Abstraction
+hides complexity, showing only essential features
+
+-inheritance
+one class inherite properties from another
+
+-PolyMorphism
+some method behaves differnetly for diff objects
+-------------------------------------------------------------------------------------------------------------------------------------------
+Constructors
+They are authomatically called during object creation
+
+we can call one constructor from another
+purpose is to reuse the code and avoid duplications
+
+within the same class - this() keyword
+from base class - super() keyword
+---------------------------------------------------------------------------------------------------------------------------
+Access specifiers and its purpose
+Public
+accessibale everywhere across the program , inside, outside the class and package
+
+Private
+Only within the same class
+
+Protected
+within the same package and by subclass in diff packages

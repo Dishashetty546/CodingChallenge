@@ -1,0 +1,110 @@
+Wrapper class - where we convert primitive datatypes to objects
+Conversion from primitive datatypes to objects
+
+ex: int to Integer
+float to float
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Access Modifier - the visibility or scope or accessbility of particular variables, classes, functions
+there are types of access modifiers
+
+public
+protected
+private
+default
+
+scope of the access modifiers
+public - accessable anywhere in the program, classes, package, it has highest scope
+protected - it has second highest scope, anywhere inside or outside the package,
+default - accessed only inside same package
+private - has the least scope, can be accessed inside the same class, not outside
+
+scope of variable or types of variables
+
+local
+static
+instance
+--------------------------------------------------------------------------------------------------------------------------------------
+
+Inheritance 
+
+establish relationship bw parent class and child class
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+single Inheritance
+multiple interitance
+multilevel Inheritance
+heirercial interitance
+
+MULTI LEVEL Inheritance
+A CLASS
+|
+B CLASS
+|
+C CLASS
+
+MULTIPLE Inheritance
+java do not support multiplr Inheritance
+
+----------------------------------------------------------------------------------------------------------------------------
+Polymorphisn
+
+many forms
+one function, behave differently in differennt situatiin
+
+compile time
+run time 
+
+compile time Polymorphisn - method overloading
+method overloading - method overriding
+
+system is a object
+println is the method
+
+same methos can act differently at different sutuation
+by changing no of parameter
+changing the data type of the parameter
+changing the sequence
+
+method overloading happens within the same class
+
+-------------------------------------------------------------------------------------------------------------------------------
+Run time polymorphism
+
+method overriding 
+
+
+PLEASE COMPLETE SELF LEARNING LINKS 
+STRINGS  - DO
+EXCEPTIONAL HANDLINGS
+OOPS CONCEPTS - DO
+----------------------------------------------------------------------------------------------------------------------
+abstract method or normal method
+
+Abstract method
+
+difference from 
+normal method
+create by method by its name and body
+
+abstract method
+Method with no body
+
+
+difference between abstract class and normal class
+
+abstract class = we cant create an object, we use abstract keyword
+normal class = we can create new object easily, we dont use abstract keyword
+
+why object creating is restricted in abstract class
+
+in asbract method its by default abstract
+interface - can have only abstract method
+----------------------------------------------------------------------
+we can have static and defauly method in an abstract method
+
+ STRING
+ EXCEPTIONAL HANDLINGS
+
+
+ 

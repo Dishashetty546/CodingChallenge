@@ -1,0 +1,9 @@
+Big O 
+
+Big O(1)
+Big O(n)
+Big O(log n)
+
+space
+time
+

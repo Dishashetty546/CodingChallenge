@@ -1,0 +1,120 @@
+mkdir - make directory, create a new directory with new name, given name
+ls - list the contents of the directory, if we use ls cammand will get all the files in that directory, there will be different colors, blue color is for the directory
+cd - change to directory, what ever directory we want to change into will give that particulat directory, then the cursor will be in that directory
+touch - used to create a empty file, it will create a new empty file
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+cat - 
+* cat > filename.txt - creates a new file, and add content to that file and use ctrl+d to savce that content into file
+* cat filename - display content of this file
+* cat filencat ame_1 filename_2 > filename_3m  -  creates new file , and contents of both files will be merged and saved in new file, where filename_3 is the new file with merged contents
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ls *.txt -  ls is to show all the files in the directory , so ls*.txt is for displaying all the files of txt form in that directory
+ls *.py - only with .py extension
+.....etcccat
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+pwd - will display the current working directory
+ex: PS C:\Users ls\LENOVO\OneDrive\Desktop\CRACK-DREAM-JOB> pwd
+
+Path
+----
+C:\Users\LENOVO\OneDrive\Desktop\CRACK-DREAM-JOB
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+cp - copy a file or directory 
+ex: cp copy_here.txt  copy_from.txt
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+mv file_name_which_to_move.txt  file_directory_where_you_want_to_move
+- moves file or directory
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+vi - to edit the file, vi file_name.txt
+which will open the vi editor, where we can edit the file
+If we add multiple lines, say 20 lines
+
+head - display top/first 10  lines of the files in the file
+head file_name.txt
+
+tail - display bottOom/last 10 lines of the file
+tail filename.txt
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+tac - reverse of the cat
+because, the cat filename.txt will display exact thing in right order
+whereas, the tac filename.txt will display exact thing in reverse order
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+more - used to display entire thing, because some times when we try to display contents of files, then get cutted
+more filename.txt  will display the entire thing
+similar to cat, but used to display large contents 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+id -  use to display id/group
+
+clear - used to clear the screen, when the screen is full
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+vi - text editor, which is used to edit or add contents to the existing files
+// to save -  :wq
+
+grep - is to filter, or its like  search for a keyword or content in the file
+ex: grep linux filename.txt
+
+it will highlight the "linux" in file filename.txt
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+fuf
+diff - it compares contents of two different files, 
+diff filename.txt fileTwo.txt
+it will display the difference if there is any common , it will clear that and dont display that
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ping - checks the connectivity status to server
+history - it will reveiw all the cammands used so far
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+hostname - it will display the hostname
+ex: 
+PS C:\Users\LENOVO\OneDrive\Desktop\CRACK-DREAM-JOB> hostname
+LAPTOP-C6M103V8
+PS C:\Users\LENOVO\OneDrive\Desktop\CRACK-DREAM-JOB>
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+hostname -i
+it will display the hostname ip address
+
+chmod - it is used to change the user/group permissions to access the file
+the permissions may be only for read only or write only 
+ex: chmod u=r filename.txt
+so now we cant edit or write filename.txt file, we can only read
+
+different permissions
+chmod u=r filename.txt
+chmod u=w  filename.txt
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+nl - its to give line number before the particular line
+wc - give number of lines, words, characters available in file contents
+
+wc filename.txt
+o/p: 1 6 33 filename.txt
+where 1-lines, 6-words, 33-characters
+
+uniq -  remove duplicated of file contents / it can remove only continuous duplicates
+
+ex:
+thank
+thank
+hello
+world
+hello
+
+//here duplicated in continous lines will be removed, if not itll not be removed
+o/p
+
+thank
+hello
+world
+hello
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+rmdir - it will remove the directory, but but the directory should be empty
+first have a directory
+check for ls new_directory
+if there is nothing
+then rmdir new_directory
+then it will get deleted
+directory should be empty
+
+rm - delete / remove file
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------

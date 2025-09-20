@@ -1,0 +1,562 @@
+pwd - present working directory - is to get which directory we are currently in
+---------------------------------------------------------------------------------------------------
+whoami - to display current login / sign in user
+----------------------------------------------------------------------------------------------------
+date - to check date, time and year in linux terminal
+to personalize the date veiwing
+-------------------------------------------------------------------------------------------------------
+date +%D  - display todays date only - ex: 9/09/2025
+date +%T - display current Time only - ex: 19:09:23
+date +%H - display current hour
+---------------------------------------------------------------------------------------------------------
+ls - current folder does it has any files, to check that
+ls -lt - it gives detiled information about the time when the last time it got modifies, date etc
+ls -ltr - it will sort the files, the one which is latest , will be displayed up, mainly latest file will be seen in the lowest row, this will also display the size of the file
+the file size is very little readable
+ls -lh - it will make it human readable
+ex: -rw-r--r-- 1 root root 114 Dec 26  2020 bench.py
+    -rw-r--r-- 1 root root 185 Sep  9  2018 hello.c
+    (-) before determines it is about the file name
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+clear - to clear the terminal
+------------------------------------------------------------------------------------------------------------------------------------------------
+create, manipulate and edit files
+cat > filename_1 - to create a file named  filename_1 and add the content to it
+cat filename_1 - to add content to this file
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+less test.csv - search for element or keyword on the file test.csv
+
+start searching using - /
+ex: /kore
+
+you'll get all the kore word highlighted
+
+press n to see other
+
+shift + g  --> this      should last slide 
+
+press q to quit
+----------------------------------------------------------------------------------------------------------------------------------------------------
+more filename_1
+- file will get displayed in terminal , but less will display in seperate editor
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+touch filename_1 - create a new empty file in the directory
+-------------------------------------------------------------------------------------------------------------------------------------------------
+rm filename_1 - remove the file from the directory
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+vi file_name1  - is to create a new file, then opens that file in editor
+
+press shift : then wq - to exit from the editor
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+nano newFile - editing the files make easy by nano keyword. give different functionality
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+cat filename - to display the contents of the file
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+mkdir folder - create a new folder
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+rmdir foldername - delete the folder, only when that directory is empty
+rm -rf foldername - delete the folder same way, with diff cammand
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+cd path - to change directory
+pwd - present working directory - to check which directory are we currently information
+ls - list - to list all the directory - some are in white and blue fonts, blue font determines that it is the directory we are currently information
+----------------------------------------------------------------------------------------------------------------------------------------------------
+cd .. - going 1 folder back
+cd myfolder/newfolder/ -- going into multiple folders front
+cd ../.. - 2 directory back
+
+cd / - going to root directory
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+cp  file_name  path_where_you_want_to_add  - copy the file in that path location
+cd ../
+
+if you want to copy a file which is in last location , and you want to copy that in present location
+cd ../filename_1 .
+
+
+copy one file content in another file
+cp file_you_want_to_copy  file_which_you_want_to_have_copied_content
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+when you want to move a particular file from that path to some other folder
+mv filename folder_path_where_you_want_to_move_that_file
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+when you want to change or rename the file name
+mv newfile file_name_to_which_you_modify
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+when you to display a 5 lines first from a file
+head -5 file_name
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+when you want to read last 5 lines or latest 5 lines'
+tail -5 file_name
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+how to sort the content from a file in linux
+it'll sort based on alphabet, numbers ...etc
+sort file_name
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+how to reverse sort based on alphabet, numbers..etc
+sort -r file_name
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+If we want to file unique contents from the file, remove all the duplicate lines
+steps
+1. sort the file content
+sort filename
+
+2. then again, sort with uniq keyword
+sort file_name | uniq
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+If the file has ex: 9 lines, if you want to split this file in 3 different files in linux
+
+split -l 3 file_name
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+when you want to search for a word and display matching content from a file in linux
+grep "word" file_name
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+difference bw grep and less
+
+grep - has good searching capability, and has smooth search context, and each word is highlighted clearly, it has many data searching tools and features
+
+less - is also to search for word , but not as powerful and clear as grep
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+one word is fine, what if you want to find multiple words in a file
+
+egrep "word1 | word2" file_name1
+
+those 2 words, everywhere in the file is highlighted
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+where all in linux commands do we use, WILDCARDS ---->  *[]{}
+
+ls *.text  --> list all the files with .txt extension
+ls x*  --> list all the files, which starts with x
+ls *x ---> list all the files, which ends with x
+
+
+when you want to make 20 files together, file1, file2, file3, file4.......file20
+touch file{1...20}
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+when you want to shuffle the content of the file in linux
+
+shuf file_name
+
+all contents will get mixed or shuffled
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+when you want to count number of lines in a file
+
+wc -l file_name
+this will print number of lines of contents you have in a file
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+check if two files are identical in linuc
+cmp file_1 file_2
+
+-it will just compare 2 files, but dont display the exact changes made
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+how to compare 2 files and display diff bw two files in linux
+diff -u file_1 file_2
+-this will compare and show the differences
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+if you are using linux and you forgot where you saved file named test.csv
+
+find ./ -name test.csv
+
+--you'll get the path where test.csv is
+
+here , when we use find, it will go and check each of the file in that particular directory
+then, if it find them, it will show the path
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Another optimized method 
+first , what it does is, linux have a seperate database for cachinh, where it stores all more excessing files, to optmize and increase efficiency
+wherever, we have created a new file and made any manupulation, 
+do updatedb, this will save it in cache memory
+
+step 1:
+updateddb
+
+step 2:
+locate test.csv
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+If you want all the cammands you used today, yesterday or before
+
+-history
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+we can retrive all the previously used commands, but with certain keyword or buzzword
+
+- history | grep sort
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+If you know certain commands , but do not know how exactly their other commands working
+
+- ls --help
+
+more detailed step by step
+- ls --help | more
+
+// it will give syntax and little info
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+If you want detailed about the cammand
+
+- man ls
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+ check which executatble is using for a command
+- which ls
+
+which shows, when we write ls in cammand prompt whicj is executing
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+use caluclor in linux
+ - bc 
+
+ stands for basic calculator
+
+ ex: 8*9, 9+9...etc
+
+ ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ To get present months calender 
+ - cal 
+
+ ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+ If you want calender of a specific year
+
+ - cal 2020
+
+ -it will dispaly , full calender of 2020
+
+ ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ If specifiacally a month and year calender
+
+ - cal jan 2020
+
+ ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ In a company, there might be many users using linux servers
+
+ to check number of users
+ - uptime
+
+ ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ If you want to print something in a terminal
+ echo "hello"
+
+ -hello
+ -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ If you want to record your cammands which you used over a period of Time
+
+step 1:
+- script
+
+step 2:
+- there will be creation of new file named typescript
+
+step 3:
+- start adding some cammands
+ex:
+ls
+cal
+touch file.txt
+man
+
+step 4:
+press ctrl+D
+
+step 5:
+there will be file named typescript will be saved in your directory
+
+step 6:
+open in
+- cat typescript
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Making shortcuts of the Linux commands to make them easy to use
+
+ex:
+
+step 1:
+Instead of
+ls -ltr
+
+step 2:
+make
+alias l = "ls -ltr"
+
+step 3:
+whenever you run l, it will make sure to run ls ltr
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+When You want to compress files in Linux
+gzip -k test.csv
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+when you want to decompress file in linux
+
+there are 2 methods to do so
+1. gzip -d test.csv
+2. gunzip file
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+When You want to compress full folder, that folder consists of multiple files
+
+tar -czf folder_name_of_compressed_folder the_folder_you_want_compressed_path
+
+czf - compress zip file
+
+the type of the compressed folder - file
+before its type - folder directory
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+how to decompress folder in Linux
+
+tar dzf folder_compressed
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+when you want to compress multiple files and put into one zip file
+
+
+zip compressed_zip_folder file_one file_name_to_which_you_modify
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+List the files in Zipped file
+
+unzip -l zipped_file
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+How to download a file from internet
+
+get the url of download_the_file page
+wget url_of_that_file_download_page
+
+
+then tht will get downloaded
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+call API on linux
+curl http://numbersapi.com/random
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+how to install an application on linux
+apt install nginx
+yum install nginx    --> This cammand might throw error saying "this system is not resgustered with an entilrmrnt serve, you can use subscription manager to register"
+
+most commonly used one
+sudo yum install nginx
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+how to check if applications is installed or not in linux
+
+rpm -qa | grep nginx
+rpm -qa | grep python
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+How to list all the packages installed in our linux server?
+dnf list installed
+
+it'll show all the installed list in a sorted order 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+how to list available pacakages to install on linux
+apt search package_name
+
+yum list available
+
+
+dnf list available
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+how to get list of versions available, specifiacally for one package_name
+
+dnf list available | grep mysql
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+how to start or stop a service on linux
+
+systemctl start service_name
+
+systemctl stop service_name.service
+
+ex: systemctl stop nginx.service
+    systemctl start nginx.service
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+how to list all services on linux
+systemctl list-units --type=service --all
+
+
+//display all the services, with its status like - active, inactive, found, not found
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+list of all existing environment varaiables on linux
+printenv
+
+it will print all the list , paths, shell by default
+
+let say we have java related application, to exicute that linux have to look for java pacakages, and then exicute them
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+When you want to check which all the packages which are installed related to java
+dnf list installed | grep java
+
+//it will list all the java packages available
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+when you want to check which version it is current using
+
+java --version
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Lets say its version is 11 now, but you want to use 17 version
+
+It will export the version 17
+export JAVA_HOME = 'PATH_OF_THAT_PARTICULAR_JAVA_VERSION'
+
+but still now, if you check it will be 11
+export PATH = $JAVA_HOME/bin:$PATH
+
+Now check for version
+java --version
+
+
+//now once you logout , all changes will be erased permanently
+//till the terminal is open, it will be there
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+How to add environment variable permanently, on linux, even if you lgout or go out of the terminal it should work the same way
+//this is user specific, if another user logins, they cant see this
+//firstly you should be in home directory
+
+ls -la 
+it will should all the file, all hidden files, all bash files
+where youll find bashrc, bash_history..etc
+
+vi .bashrc
+to edit thr bashrc file
+then insert anything, lets insert a variable, TESTVAR= "ABCD"
+
+printenv
+//it will not be printed yesterday
+
+//now we have to export that variable
+export TESTVAR
+
+then we have to source .bashrc
+source .bashrc
+
+check now
+printenv | grep TESTVAR
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+how to print specific column from csv file
+ if you want to print first 2 coumn
+awk -F, '{print $2}' file.csv
+the csv file is feild seperated by , print $2, column number 2
+
+
+if you want to print first coumn and 2nd column
+
+awk -F , '{print $1,$2}' file.csv
+it will print 1st adn 2nd coumn with space seperated
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+If you want to print 1 characetr of all the line of the file
+cut -c1 mini.txt
+
+first 2 character of all the line of file mini.txt
+cut -c1-2 mini.txt
+
+if you want 2nd and 3rd letter
+cut -c2-3 mini.txt
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+when you want to display specific line from a file
+sed -n '5p' file.txt
+5th line will get printed
+
+sed -n '6p' file.txt
+6th line will get printed
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+how to replace a specific word within a file
+sed 's/from/to/g' file.txt
+
+where g - global
+
+steps
+step 1:
+create a file and add contents to it, insert some lines
+cat > filename.txt
+hello world bye
+
+step 2:
+sed -n 's/bye/hi/g' filename.txt
+
+it will get replaced
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+how to change the content to UpperCase or LowerCase within a file
+tr [:lower:] [:upper:] file_name.txt
+
+change from lowercase -> UpperCase
+where tr - translator
+
+
+tr [:upper:][:lower:] file_name.txt
+change from upper -> lower
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+If you want to delete something from a file, specifically a word or letter
+tr -d % < test.txt
+
+--------------------------------------------------------------------------
+if you want to change % sign with this &
+tr "%" "&" < text.txt
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+how to extend or shrink size of a file
+check detailed about files, size, date of last change
+ls -lh
+
+truncate -s 100M filename.txt
+
+ls -lh
+
+//if you increased the size, linux will add some random words to increase the size
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+how to displat the line in vertical form 
+
+eco ABCDE | fold -w1 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+how to check who am i?
+whoami
+
+how to check host name
+hostname
+
+how to check IP address of the host
+hostname -i
+
+how to change the username
+su 
+
+then,linux server will ask for root users password, once you enter, username gets changed
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+how to exit as current user or close terminal in linux
+exit
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+How to install new applications
+apt install app_name
+
+yum install app_name
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+how to install new application when you are not a root user
+sudo yum install nutanix
+
+
+sudo is not given access by server admin, then only the user can use sudo cammand
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+

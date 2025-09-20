@@ -1,0 +1,351 @@
+Access Remote servers
+
+if you want to access some other server
+
+You should have its hostname or ip
+You should have username and login password
+-if not we should contact linux server admin
+
+if you want Ip of the server you are using
+ifconfig
+
+if you want hostname
+hostname
+
+ssh hostname@ip
+
+ssh disha@The_ip_address_you_got_through_ifconfig
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+How to access a remote server
+
+firstly
+you should know the IP address
+ifconfig
+
+secondly
+you should get your hostname
+hostname
+
+then 
+ssh hostname@The_ip_address_you_got_through_ifconfig
+
+enter the password, you got from the server admin
+then you'll be in that server, you got access
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+How to copy a file to a remote linux server
+scp file hostname@The_ip_address_you_got_through_ifconfig:/location_where_you_want_to_copy_into
+
+pwd: present working directory
+ls: list
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+how to check permissions of a file
+
+ls -ltr 
+
+
+In files you have these
+rwx rw- r--
+
+rwx - file who created what is his permissions, read, write and (execution ->you cant mosdify files here)
+rw - group permissions, if there are 3 members in a team, what all permissions do they get to have
+r - they do have only read permission
+
+
+who made that file
+
+root - if the file is made by root users, then its root
+hostname - if the file is done by specific host
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+If while accessing any of the files, if you get permission issues, then you'll know what exactly is the issues
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+How to modify permission of the file
+
+chmod a+rwx file_name
+
+chmod - change modifiers`
+
+where a - all, which can be u-user, g-group, o-other, a-all
+the file owner can only modify the permission
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+how to change ownership of the file
+
+if right now the owner is root
+
+chown paul root_file
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+when you want to change group ownershup of a file
+
+chgrp paul file.txt
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+when you want to check information of a specific file contents
+
+ls -l root_file_name
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Memory info
+
+How to check free RAM space
+free
+
+youll find a list of all the used and free memory space
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+the display of the memory info is not readable, to make it readable
+
+free -h 
+
+where h-human readable
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+If you want total how much memory is free and used
+
+free -th 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+How to check % memory and CPU utilization
+
+if you want all the information like how much memory is used or free, cpu utilization
+top
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+how to check disk utilization
+du 
+
+it will display, like how much files are there in a folder or directory, how much space are they taking
+in bytes
+
+in MB the data is stored is you want that
+du -h folder_or_file_location
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+If you want to know file system, sna disk space of each of the file or folder
+
+df
+
+to make it human readable
+df -h 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+System info
+
+how to check hostname of the linux server
+hostname
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+how to check cpu/core/thread info of your linux server
+lscpu
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+how to check type of architecture of your linux server
+arch 
+
+ex: o/p: arch64
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+how to see list of storage devices , disk partition on your linux server
+lsblk
+
+ls - list
+blk- block
+
+this will display the name, sd1,sd2, sd3 - memory space
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+How to see OS name in Linux server
+uname -a 
+
+cat etc/os-release
+this gives in detail about OS
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+How to check if a process is running or not
+ps -ef | grep java
+
+
+ps -ef | grep nginx
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+when you want to start the server and check the process status of particular application
+systemctl start nginx.service
+
+then check the status
+systemctl status nginx.service
+
+
+it will show which is process is activated now, PIC, PCB table etc
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+How to get PID of a process
+pgrep chron
+
+process ka grep
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+How to stop a process by PID
+
+kill -9 PID
+
+sudo kill -9 PID
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+How to stop a process by its name, not just by its PID
+
+kill -9 PID 
+pkill name_of_the_process
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Ex:
+start the server
+systemctl start any_server_you_want_to_run
+
+pgrep name_any_server_you_had_run
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------  
+How to see all the active Jobs
+
+Job - when we give terminal some task,  for that terminal that is one of the Job
+
+Jobs
+
+the jobs which are currently running or pasused will be seen there
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+if you want to make terminal sleep
+
+sleep 5s
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+If some job is Resumed, id you want to resume that job in background
+bg
+
+the task or job is running in the background
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+If you want to make it resume in foreground , to make it run infront of your screen
+fg
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+How to run a script in background
+
+step 1:
+create a script
+
+vi new_script.sh 
+
+it will open a editor
+where you'll 
+echo "what is your name"
+
+ step 2:
+ bash new_script.sh
+ this will run the script file
+
+ ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ how to check IP in linux
+ ifconfig
+
+ ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ how to check if server or website is accessable or not
+ ping www.google.com
+
+will show the packets lost, received, time ,packets transmitted
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+How to check is IP:PORT is accessible and open or not
+
+telnet IP port
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+how to check is port is open or not on pur server
+
+netstat  -putan | grep 80
+
+how to check this
+step 1:
+run a web server
+systemctl start www.google.com
+
+step 2:
+netstat -putan | grep 80
+
+since web servers run in localhost 80
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+how to checl all the hubs in network path to reach the website
+
+traceroute www.google.com
+
+before reaching google website, it goes through differnt hubs those are displayed here, at last it will hit the google server
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+How to restart our linux server
+reboot
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+How to shutdown the linux server
+shutdown
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+how to a add or create a new user to our linux server
+step 1:
+useradd
+ex:
+ueradd alex
+
+step 2:
+once we create any new user, the linux server will automatically assign an Id to particular user
+id alex
+
+step 3:
+assign password to that user
+passwd alex
+
+give suitable password
+
+step 4:
+if you want to switch from current user to new user you just created
+su alex
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+hwo to create a new group in our linux server
+step 1: create a new group
+groupadd testing 
+
+step 2: check if its created or not
+cat /etc/group
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+how to get Id of the user
+Id paul
+Id alex
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+how to delete user or group
+userdel user_name
+
+groupdel group_name
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+If you want to change the group of the user
+
+ex:
+step 1:
+create a user 
+useradd nick
+
+check for its Id
+id nick
+
+step 2:
+groupadd test
+
+step 3:
+usermod -G test nick
+
+step 4:
+ID nick
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+When you want to add something in some file at some time
+
+step 1:
+check for the date and time
+date
+
+step 2:
+at 5:10 PM
+
+step 3:
+what you want to do at that time
+echo "At cammand add"> at demo.txt
+
+ctrl+D
+
+step 4: once time turns, it will automaticall gets exicyred
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
